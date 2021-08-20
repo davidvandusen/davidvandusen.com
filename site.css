@@ -1,6 +1,6 @@
 :root {
   --sans-serif: -apple-system, BlinkMacSystemFont, "Avenir Next", Avenir, "Segoe UI", "Helvetica Neue", Helvetica, Ubuntu, Roboto, Noto, Arial, sans-serif;
-  --serif: "Iowan Old Style", "Apple Garamond", Baskerville, "Times New Roman", "Droid Serif", Times, "Source Serif Pro", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --serif: "Iowan Old Style", "Source Serif Pro", "Droid Serif", "Georgia", serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --mono: Courier, monospace;
 }
 
@@ -13,6 +13,12 @@ body {
   color: #333;
   font-family: var(--serif);
   margin: 2rem;
+}
+
+@media (max-width: 767px) {
+  body {
+    margin: 1rem;
+  }
 }
 
 a:link {
@@ -38,6 +44,13 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, dl {
 h1 {
   font-size: 3.5em;
   line-height: 1.25;
+  word-break: break-word;
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 2rem;
+  }
 }
 
 h2 {

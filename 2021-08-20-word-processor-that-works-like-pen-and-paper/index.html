@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="initial-scale=1, width=912" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
   <link rel="stylesheet" href="/site.css" />
   <title>Word Processor That Works Like Pen and Paper</title>
   <style>
@@ -99,7 +99,6 @@
     <figure>
       <div id="demo3" class="demo-contenteditable">Add to this text to try out the modified input.</div>
       <script>
-        const demo3 = document.getElementById("demo1");
         demo3.contentEditable = "true";
         demo3.spellcheck = false;
         demo3.addEventListener("beforeinput", event => {
@@ -129,7 +128,6 @@
     <figure>
       <div id="demo4" class="demo-contenteditable">Try writing, <u>marking</u>, and deleting text in this input.</div>
       <script>
-        const demo4 = document.getElementById("demo2");
         demo4.contentEditable = "true";
         demo4.spellcheck = false;
         demo4.addEventListener("beforeinput", event => {
