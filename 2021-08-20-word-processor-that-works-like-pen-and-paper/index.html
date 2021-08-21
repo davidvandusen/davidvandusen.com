@@ -4,6 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="initial-scale=1, width=device-width" />
   <link rel="stylesheet" href="/site.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
   <title>Word Processor That Works Like Pen and Paper</title>
   <style>
     .demo-contenteditable,
@@ -124,7 +126,7 @@
     </ul>
     <p>In order to add these features, when the user shows an intent to format or delete content, the selected text is nested in an inline formatting element such as <code>&lt;del&gt;</code> for deleted text. CSS is used to add more markings to formatted text that is nested multiple times.</p>
     <p>One problem that arises when trying to format text across lines stems from the browser’s default line breaking behaviour, which is to wrap subsequent lines in <code>&lt;div&gt;</code>s. In order to keep the formatting code simple, <code>"insertLineBreak"</code> and <code>"insertParagraph"</code> input intents can be changed to simply add <code>&lt;br&gt;</code>s.</p>
-    <p>Another problem is with the way selection ranges work. When there is a formatting element as the last child with text content in the input, text will be added into that element, making new text take on the formatting. In the following example, I added a zero width space character after any trailing formatting element, which solves this problem. During subsequent text input events, the unnecessary zero width space characters are removed.</p>
+    <p>Another problem is with the way DOM <code>Range</code>s work. When there is a non-text node as the last child with text content in the input, new text will be added into that element. That would be a problem when the last node is a formatting element. To address that in the following example, I added the zero width no-break space character after any trailing formatting element. During subsequent text input events, the unnecessary space characters are removed.</p>
     <figure>
       <div id="demo4" class="demo-contenteditable">Try writing, <u>marking</u>, and deleting text in this input.</div>
       <script>
@@ -168,10 +170,10 @@
           }
           // Ensure there's a text node at the end for typing to be inserted at, otherwise it'll end
           // up inside the last formatting tag, or the cursor won't appear after <br>s and look weird.
-          event.target.innerHTML = event.target.innerHTML.replace(/\u200B/g, "");
+          event.target.innerHTML = event.target.innerHTML.replace(/\uFEFF/g, "");
           const lastNode = event.target.childNodes[event.target.childNodes.length - 1];
           if (lastNode.nodeType === 3 && lastNode.length === 0 || lastNode.nodeType !== 3) {
-            event.target.insertAdjacentText("beforeend", "\u200B");
+            event.target.insertAdjacentText("beforeend", "\uFEFF");
           }
           // Place the cursor at the end of the text.
           const selection = window.getSelection();
@@ -189,14 +191,14 @@
       <li>Previous sessions can not have any content or markings added.</li>
       <li>Each time a new sessions is started, the current date and time can be automatically added.</li>
     </ul>
-    <p>An example of these features, including persistence to browser storage, can be seen at <a href="https://journal.figureandsound.com/">journal.figureandsound.com</a>.</p>
+    <p>An example of these features, including persistence to browser storage and a number of other small improvements, can be seen at <a href="https://journal.figureandsound.com/">journal.figureandsound.com</a>.</p>
     <hr />
     <p>There are several other features of ink on paper writing that might be suitable for an application like this. For example:</p>
     <ul>
       <li>Notes can be written in the margins of the pages.</li>
       <li>Corrections can be added between the lines of text in the way that one might edit a manuscript.</li>
     </ul>
-    <p>Also, accessibility to different input methods should be considered. For example, an interface should be added for formatting that doesn’t rely on shortcuts only available to physical keyboard users.</p>
+    <p>Furthermore, accessibility to different input methods should be considered, such as IME composition. Also, an interface should be added for formatting that doesn’t rely on shortcuts only available to physical keyboard users.</p>
     <p>That said, I still want to challenge you to try to write a paragraph or two on <a href="https://journal.figureandsound.com/">journal.figureandsound.com</a> and ask yourself whether these constraints make you think differently about writing. ✍</p>
   </main>
   <footer>
