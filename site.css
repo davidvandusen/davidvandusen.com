@@ -9,16 +9,16 @@ html {
   line-height: 1.5;
 }
 
+@media (max-width: 767px) {
+  html {
+    font-size: 18px;
+  }
+}
+
 body {
   color: #333;
   font-family: var(--serif);
   margin: 2rem;
-}
-
-@media (max-width: 767px) {
-  body {
-    margin: 1rem;
-  }
 }
 
 a:link {
