@@ -63,7 +63,7 @@
   </header>
   <main>
     <p>Writing on a computer has a ton of advantages over ink on paper: you can undo mistakes, insert new content into existing text, rearrange ideas, copy and paste, correct spelling and grammar…. These features make it easier to create polished documents—to turn a rough draft into a publishable work with few traces of the mistakes and dead-end ideas along the way. But, they make it unsuitable for some purposes, like keeping an authentic journal.</p>
-    <p>Furthermore, perhaps writing with the constraints of pen and paper helps develop better habits, like thinking through how ideas should be organized and worded before committing to them. (Not to mention practice writing without typos.) And maybe we have become less mindful of how we come across in writing because we’re too accustomed to the ease by which we can reword our thoughts before setting them down.</p>
+    <p>Furthermore, perhaps writing with the constraints of pen and paper helps develop better habits, like thinking through how ideas should be organized and worded before setting them down. (Not to mention practice writing without typos.) And maybe we have become less mindful of how we come across in writing because we’re too accustomed to the ease by which we can reword our thoughts before committing to them.</p>
     <p>Last week, I picked up where I had left off several months earlier in <a href="https://www.dorsethouse.com/books/btl.html">Becoming a Technical Leader</a> by Gerald M. Weinberg. I was on chapter 7, “A Tool for Developing Self-Awareness.” Weinberg challenges the reader to, “Starting now, and continuing for three months, spend five minutes each day writing in a personal journal.” He recommends investing in a nice notebook and pen, but using a word processor may be OK in some situations.
     </p>
     <figure>
@@ -96,7 +96,7 @@
     <ul>
       <li>The browser’s integrated spell checker can be disabled by setting the <code>spellcheck</code> attribute of the element to <code>false</code>.</li>
       <li>Edits other than normal text entry can be prevented by adding a handler for the <code>beforeinput</code> event that calls <code>preventDefault()</code> on it if the <code>inputType</code> is anything other than <code>"insertText"</code>, <code>"insertLineBreak"</code> or <code>"insertParagraph"</code>. This prevents most cutting, pasting, dragging and dropping text, undoing, and deleting.</li>
-      <li>Additions of text and newlines can be forced to come at the end of the input by setting the <code>Selection</code> in the <code>beforeinput</code> handler, preventing any editing of text that was already written.</li>
+      <li>Additions of text and newlines can be forced to come at the end of the input by updating the <code>Selection</code> in the <code>beforeinput</code> handler, preventing editing text that was already written.</li>
     </ul>
     <figure>
       <div id="demo3" class="demo-contenteditable">Add to this text to try out the modified input.</div>
@@ -122,11 +122,11 @@
     <p>Further modifications can be made to add features that are possible when writing by hand.</p>
     <ul>
       <li>Text can be underlined to draw attention to it. Marking text multiple times can add more marks under the text.</li>
-      <li>Erroneous text can be struck out. Striking out multiple times can visually redact the text by completely blacking it out.</li>
+      <li>Erroneous text can be struck out. Striking out multiple times can visually redact the text by completely obscuring it.</li>
     </ul>
-    <p>In order to add these features, when the user shows an intent to format or delete content, the selected text is nested in an inline formatting element such as <code>&lt;del&gt;</code> for deleted text. CSS is used to add more markings to formatted text that is nested multiple times.</p>
-    <p>One problem that arises when trying to format text across lines stems from the browser’s default line breaking behaviour, which is to wrap subsequent lines in <code>&lt;div&gt;</code>s. In order to keep the formatting code simple, <code>"insertLineBreak"</code> and <code>"insertParagraph"</code> input intents can be changed to simply add <code>&lt;br&gt;</code>s.</p>
-    <p>Another problem is with the way DOM <code>Range</code>s work. When there is a non-text node as the last child with text content in the input, new text will be added into that element. That would be a problem when the last node is a formatting element. To address that in the following example, I added the zero width no-break space character after any trailing formatting element. During subsequent text input events, the unnecessary space characters are removed.</p>
+    <p>In order to add these features, when the user shows an intent to format or delete content, the selected text can be nested in an inline formatting element (such as <code>&lt;del&gt;</code> for deleted text.) CSS can be used to add more markings to formatted text that is nested multiple times.</p>
+    <p>One problem that arises when trying to format text across lines stems from the browser’s default line breaking behaviour, which is to wrap subsequent lines in <code>&lt;div&gt;</code>s. In order to keep the formatting code simple, <code>"insertLineBreak"</code> and <code>"insertParagraph"</code> input intents can be changed to simply add <code>&lt;br&gt;</code>s instead.</p>
+    <p>Another problem is with the way DOM <code>Range</code>s work. When there is a non-text node as the last child with text content in the input, new text will be added into that element. That would be a problem when the last node is a formatting element because there would be no way to break out of it. To address that, a zero width no-break space character can be added after any trailing formatting element. During subsequent text input events, the unnecessary space characters can be removed.</p>
     <figure>
       <div id="demo4" class="demo-contenteditable">Try writing, <u>marking</u>, and deleting text in this input.</div>
       <script>
@@ -186,17 +186,17 @@
       </script>
       <figcaption>Example of an element that treats deletion and formatting in an ‘additive only’ way. Text can be marked with <kbd>cmd/ctrl + B/I</kbd>, and crossed out with <kbd>delete/backspace</kbd>.</figcaption>
     </figure>
-    <p>To turn this demo into a proper journal there are a few more features may be desired.</p>
+    <p>To turn this demo into a proper journal there are a few more features that may be desired.</p>
     <ul>
-      <li>Previous sessions can not have any content or markings added.</li>
-      <li>Each time a new sessions is started, the current date and time can be automatically added.</li>
+      <li>Each time a new session is started, the current date and time can be automatically added.</li>
+      <li>Previous journal entries can not have any content or markings added.</li>
     </ul>
-    <p>An example of these features, including persistence to browser storage and a number of other small improvements, can be seen at <a href="https://journal.figureandsound.com/">journal.figureandsound.com</a>.</p>
+    <p>An example of these features, including persistence and other improvements, can be seen at <a href="https://journal.figureandsound.com/">journal.figureandsound.com</a>.</p>
     <hr />
     <p>There are several other features of ink on paper writing that might be suitable for an application like this. For example:</p>
     <ul>
       <li>Notes can be written in the margins of the pages.</li>
-      <li>Corrections can be added between the lines of text in the way that one might edit a manuscript.</li>
+      <li>Corrections can be added between the lines of text in the way that one might edit a double-spaced manuscript.</li>
     </ul>
     <p>Furthermore, accessibility to different input methods should be considered, such as IME composition. Also, an interface should be added for formatting that doesn’t rely on shortcuts only available to physical keyboard users.</p>
     <p>That said, I still want to challenge you to try to write a paragraph or two on <a href="https://journal.figureandsound.com/">journal.figureandsound.com</a> and ask yourself whether these constraints make you think differently about writing. ✍</p>
