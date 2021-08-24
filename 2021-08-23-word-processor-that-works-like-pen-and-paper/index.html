@@ -97,6 +97,7 @@
       <li>Edits other than normal text entry can be prevented by adding a handler for the <code>beforeinput</code> event that calls <code>preventDefault()</code> on it if the <code>inputType</code> is anything other than <code>"insertText"</code>, <code>"insertLineBreak"</code> or <code>"insertParagraph"</code>. This prevents most cutting, pasting, dragging and dropping text, undoing, and deleting.</li>
       <li>Additions of text and newlines can be forced to come at the end of the input by updating the <code>Selection</code> in the <code>beforeinput</code> handler, preventing editing text that was already written.</li>
     </ul>
+    <p>⚠️ It’s worth noting that these kinds of hacks don’t work for IME composition, such as virtual keyboards on phones and multilingual input methods. To get the intended experience, try these examples with a hardware keyboard with keys mapped directly to glyphs.</p>
     <figure>
       <div id="demo3" class="demo-contenteditable">Add to this text to try out the modified input.</div>
       <script>
@@ -197,8 +198,8 @@
       <li>Notes can be written in the margins of the pages.</li>
       <li>Corrections can be added between the lines of text in the way that one might edit a double-spaced manuscript.</li>
     </ul>
-    <p>Furthermore, accessibility to different input methods should be considered, such as IME composition. Also, an interface should be added for formatting that doesn’t rely on shortcuts only available to physical keyboard users.</p>
-    <p>That said, I still want to challenge you to try to write a paragraph or two on <a href="https://journal.figureandsound.com/">journal.figureandsound.com</a> and ask yourself whether these constraints make you think differently about writing. ✍</p>
+    <p>And, somehow, accessibility to different input methods such as IME composition needs to be figured out. Also, an interface should be added for formatting that doesn’t rely on shortcuts only available to physical keyboard users.</p>
+    <p>That said, I still want to challenge you to try to write a paragraph or two on <a href="https://journal.figureandsound.com/">journal.figureandsound.com</a> (with a physical keyboard, as noted above) and ask yourself whether these constraints make you think differently about writing. ✍</p>
   </main>
   <footer>
     <p><small>© 2021 David VanDusen</small></p>
