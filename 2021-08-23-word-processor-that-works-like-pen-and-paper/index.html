@@ -58,12 +58,12 @@
 <article>
   <header>
     <h1>Word Processor That Works Like Pen and Paper</h1>
-    <p>Published on <time>August 20, 2021</time> by <a href="https://davidvandusen.com/">David VanDusen</a>.</p>
+    <p>Published on <time>August 23, 2021</time> by <a href="https://davidvandusen.com/">David VanDusen</a>.</p>
   </header>
   <main>
     <p>Writing on a computer has a ton of advantages over ink on paper: you can undo mistakes, insert new content into existing text, rearrange ideas, copy and paste, correct spelling and grammar…. These features make it easier to create polished documents—to turn a rough draft into a publishable work with few traces of the mistakes and dead-end ideas along the way. But, they make it unsuitable for some purposes, like keeping an authentic journal.</p>
     <p>Furthermore, perhaps writing with the constraints of pen and paper helps develop better habits, like thinking through how ideas should be organized and worded before setting them down. (Not to mention practice writing without typos.) And maybe we have become less mindful of how we come across in writing because we’re too accustomed to the ease by which we can reword our thoughts before committing to them.</p>
-    <p>Last week, I picked up where I had left off several months earlier in <a href="https://www.dorsethouse.com/books/btl.html">Becoming a Technical Leader</a> by Gerald M. Weinberg. I was on chapter 7, “A Tool for Developing Self-Awareness.” Weinberg challenges the reader to, “Starting now, and continuing for three months, spend five minutes each day writing in a personal journal.” He recommends investing in a nice notebook and pen, but using a word processor may be OK in some situations.
+    <p>Last week, I picked up where I had left off several months earlier in Becoming a Technical Leader by Gerald M. Weinberg. I was on chapter 7, “A Tool for Developing Self-Awareness.” Weinberg challenges the reader to, “Starting now, and continuing for three months, spend five minutes each day writing in a personal journal.” He recommends investing in a nice notebook and pen, but using a word processor may be OK in some situations.
     </p>
     <figure>
       <blockquote>
@@ -97,7 +97,7 @@
       <li>Edits other than normal text entry can be prevented by adding a handler for the <code>beforeinput</code> event that calls <code>preventDefault()</code> on it if the <code>inputType</code> is anything other than <code>"insertText"</code>, <code>"insertLineBreak"</code> or <code>"insertParagraph"</code>. This prevents most cutting, pasting, dragging and dropping text, undoing, and deleting.</li>
       <li>Additions of text and newlines can be forced to come at the end of the input by updating the <code>Selection</code> in the <code>beforeinput</code> handler, preventing editing text that was already written.</li>
     </ul>
-    <p>⚠️ It’s worth noting that these kinds of hacks don’t work for IME composition, such as virtual keyboards on phones and multilingual input methods. To get the intended experience, try these examples with a hardware keyboard with keys mapped directly to glyphs.</p>
+    <p>⚠️ These simple hacks don’t work for IME composition, like virtual keyboards on phones and multilingual input methods. To get the intended experience, try these examples with a hardware keyboard with keys mapped directly to characters.</p>
     <figure>
       <div id="demo3" class="demo-contenteditable">Add to this text to try out the modified input.</div>
       <script>
