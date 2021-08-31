@@ -9,7 +9,7 @@
   <style>
     @keyframes waves {
       0% {
-        box-shadow: 0 0 0 0 rgba(241, 233, 215, 0.3);
+        box-shadow: 0 0 0 0 rgba(215, 235, 241, 0.3);
       }
       100% {
         box-shadow: 0 0 0 15px rgba(241, 233, 215, 0);
@@ -74,8 +74,7 @@
       animation-duration: 2.5s;
       animation-iteration-count: infinite;
       align-items: center;
-      background: #f1e7d7 radial-gradient(#bbe2c0 70%, #f1e7d7 70%) no-repeat;
-      background-position: 2px 5px;
+      background: #bbe2c0;
       border-radius: 50%;
       color: #313421;
       display: flex;
@@ -94,25 +93,21 @@
       box-shadow: 0 0 25px rgba(0,31,127,0.75);
     }
     .tiny.island {
-      background-size: 50%;
       font-size: 10px;
       height: 20px;
       width: 20px;
     }
     .small.island {
-      background-size: 75%;
       font-size: 10px;
       height: 30px;
       width: 30px;
     }
     .large.island {
-      background-size: 125%;
       font-size: 14px;
       height: 75px;
       width: 75px;
     }
     .huge.island {
-      background-size: 125%;
       font-size: 16px;
       height: 90px;
       width: 90px;
@@ -155,7 +150,7 @@
       Since I shifted from independent contracting to working for companies around ten years ago,
       I’ve been given the privilege of being a mentor to new and experienced software developers in
       various roles: team lead, instructor at a school, staff developer. The conversations that came
-      from those questions have opened my eyes to how different people approach acquiring software
+      out of those questions have opened my eyes to how different people approach acquiring software
       development expertise, and how different mentors approach guiding their mentees.</p>
     <p>Software development is a sea of interrelated technologies. Simply knowing which technologies
       are relevant to a particular task is beyond the horizon for many who are new to the field. A
@@ -163,10 +158,10 @@
       network of technologies that a developer knows and use that as a tool to navigate their
       growth.</p>
     <p>In my experience, having a way of visualizing or metaphorically representing the knowledge of
-      another developer can be an invaluable tool for engaging with new problems and providing
-      succinct direction. I recall mentorship sessions being exceptionally fulfilling when I
-      employed this technique; I guided someone into unfamiliar waters, but they always knew how
-      far they were from the safety of a technology they were confident with.</p>
+      another developer can be an invaluable tool for helping them engage with new tasks and
+      providing succinct direction. I recall mentorship sessions being exceptionally fulfilling when
+      I employed this technique; I guided someone into unfamiliar waters, but they always knew how
+      far they were from the safety of a technology they were already confident with.</p>
     <p>The mental model I like to use when working with another dev looks like a map of islands in
       an ocean. Every technology that someone has expertise with is a land mass that peeks out above
       the waterline. The size of each island represents the confidence they have with its
@@ -230,8 +225,9 @@
         between technologies they already know.</figcaption>
     </figure>
     <p>Visualizing the situation this way might lead me to ask clarifying questions in an effort to
-      bridge that gap. In this circumstance that might lead to an exploration of the browser’s DOM
-      inspector, debugging console, and setting some breakpoints in the browser runtime.</p>
+      bridge that gap. In this circumstance it might lead to an exploration of the browser’s DOM
+      inspector, debugging console, and setting some breakpoints in the JavaScript source in order
+      to watch the data structures as they change.</p>
     <figure class="breakout">
       <div class="ocean-map">
         <div class="islands">
@@ -257,12 +253,12 @@
       <figcaption>A new technology island created between two distant ones helps to bridge knowledge
         gaps and starts building confidence in a new area of the water.</figcaption>
     </figure>
-    <p>As much luck as I’ve had with this mental model, yours will be different. However you
+    <p>As lucky as I’ve been with this mental model, yours will be different. However you
       visualize it, learning new tech is always easier when new knowledge can be tied back to
       something we’re already confident with. So, when you go to mentor another dev, try to develop
-      a mental model of the technologies they show confidence in. It might help to give direction
-      that leaves them feeling empowered to build robust connections between their best expertise.
-      🏝</p>
+      a mental model of the technologies they have confidence with. It might help to give direction
+      that leaves them feeling empowered to build robust connections between their existing
+      expertise. 🏝</p>
   </main>
   <footer>
     <p><small>© 2021 David VanDusen</small></p>
