@@ -71,12 +71,22 @@ figure {
   margin: 8rem 0;
 }
 
+figure.breakout {
+  margin-left: -2rem;
+  margin-right: -2rem;
+}
+
 figcaption {
   border-top: 1px solid;
   color: #777;
   font-size: 0.75rem;
   margin: 1.5rem 0;
   padding: 1rem 0 0;
+}
+
+figure.breakout figcaption {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 hr {
