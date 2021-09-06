@@ -56,7 +56,13 @@
       }
     }
     .ocean-map {
-      background: linear-gradient(90deg, #a8d2fa 0%, #9ccbf9 33%, #9ccbf9 67%, #a8d2fa 100%);
+      background: linear-gradient(
+        90deg,
+        #a8d2fa 0%,
+        #9ccbf9 33%,
+        #9ccbf9 67%,
+        #a8d2fa 100%
+      );
       height: 360px;
       overflow: hidden;
 
@@ -83,7 +89,11 @@
       height: 60px;
       justify-content: center;
       position: absolute;
-      text-shadow: 1px 1px #fbf8f3, 1px -1px #fbf8f3, -1px 1px #fbf8f3, -1px -1px #fbf8f3;
+      text-shadow:
+        1px 1px #fbf8f3,
+        1px -1px #fbf8f3,
+        -1px 1px #fbf8f3,
+        -1px -1px #fbf8f3;
       width: 60px;
     }
     .new.island {
@@ -143,32 +153,40 @@
       <a href="https://davidvandusen.com/">David VanDusen</a>.</p>
   </header>
   <main>
-    <p>What does a software developer look for in a mentor? Does it change over the course of one’s
-      career? Do different people need mentors with different approaches, and are there qualities
-      that a mentor can have that work for every mentee?</p>
-    <p>These kinds of questions have come up regularly as I moved into the latter part of my career.
-      Since I shifted from independent contracting to working for companies around ten years ago,
-      I’ve been given the privilege of being a mentor to new and experienced software developers in
-      various roles: team lead, instructor at a school, staff developer. The conversations that came
-      out of those questions have opened my eyes to how different people approach acquiring software
-      development expertise, and how different mentors approach guiding their mentees.</p>
-    <p>Software development is a sea of interrelated technologies. Simply knowing which technologies
-      are relevant to a particular task is beyond the horizon for many who are new to the field. A
-      common thread I’ve seen in successful mentorship relationships is the ability to chart the
-      network of technologies that a developer knows and use that as a tool to navigate their
-      growth.</p>
-    <p>In my experience, having a way of visualizing or metaphorically representing the knowledge of
-      another developer can be an invaluable tool for helping them engage with new tasks and
-      providing succinct direction. I recall mentorship sessions being exceptionally fulfilling when
-      I employed this technique; I guided someone into unfamiliar waters, but they always knew how
-      far they were from the safety of a technology they were already confident with.</p>
-    <p>The mental model I like to use when working with another dev looks like a map of islands in
-      an ocean. Every technology that someone has expertise with is a land mass that peeks out above
-      the waterline. The size of each island represents the confidence they have with its
-      technology. Technologies that they see as related are near each other in the ocean,
-      representing how easy it is to navigate from one to another. As related technologies are used
-      and the confidence grows, islands may merge into each other. This represents the point when
-      thinking about those technologies becomes holistic and travelling between them is
+    <p>What does a software developer look for in a mentor? Does it change over
+      the course of one’s career? Do different people need mentors with
+      different approaches, and are there qualities that a mentor can have that
+      work for every mentee?</p>
+    <p>These kinds of questions have come up regularly as I moved into the
+      latter part of my career. Since I shifted from independent contracting to
+      working for companies around ten years ago, I’ve been given the privilege
+      of being a mentor to new and experienced software developers in various
+      roles: team lead, instructor at a school, staff developer. The
+      conversations that came out of those questions have opened my eyes to how
+      different people approach acquiring software development expertise, and
+      how different mentors approach guiding their mentees.</p>
+    <p>Software development is a sea of interrelated technologies. Simply
+      knowing which technologies are relevant to a particular task is beyond the
+      horizon for many who are new to the field. A common thread I’ve seen in
+      successful mentorship relationships is the ability to chart the network of
+      technologies that a developer knows and use that as a tool to navigate
+      their growth.</p>
+    <p>In my experience, having a way of visualizing or metaphorically
+      representing the knowledge of another developer can be an invaluable tool
+      for helping them engage with new tasks and providing succinct direction. I
+      recall mentorship sessions being exceptionally fulfilling when I employed
+      this technique; I guided someone into unfamiliar waters, but they always
+      knew how far they were from the safety of a technology they were already
+      confident with.</p>
+    <p>The mental model I like to use when working with another dev looks like a
+      map of islands in an ocean. Every technology that someone has expertise
+      with is a land mass that peeks out above the waterline. The size of each
+      island represents the confidence they have with its technology.
+      Technologies that they see as related are near each other in the ocean,
+      representing how easy it is to navigate from one to another. As related
+      technologies are used and the confidence grows, islands may merge into
+      each other. This represents the point when thinking about those
+      technologies becomes holistic and travelling between them is
       effortless.</p>
     <figure class="breakout">
       <div class="ocean-map">
@@ -179,7 +197,7 @@
           <div style="left: 140px; top: 250px;" class="small island">HTTP</div>
           <div style="left:  50px; top: 160px;" class="huge island">HTML</div>
           <div style="left: 100px; top: 120px;" class="small island">DOM</div>
-          <div style="left: 170px; top: 120px;" class="large island">JavaScript</div>
+          <div style="left: 170px; top: 120px;" class="large island">JS</div>
           <div style="left:     0; top: 90px;" class="island">CSS</div>
           <div style="left:  50px; top:  80px;" class="small island">Sass</div>
           <div style="left: -90px; top:  40px;" class="small island">JPEG</div>
@@ -191,14 +209,16 @@
           <div style="left: 275px; top:   5px;" class="small island">SQL</div>
         </div>
       </div>
-      <figcaption>An illustration showing technologies a web developer might learn represented as
-        islands in an ocean.</figcaption>
+      <figcaption>An illustration showing technologies a web developer might
+        learn represented as islands in an ocean.</figcaption>
     </figure>
-    <p>The map can never be complete nor perfectly accurate. However, knowing a general direction to
-      go is better than navigating completely in the dark. For example, if the above illustration is
-      a representation of the current strengths of a dev, and they find themselves stuck debugging a
-      program running in a web browser, knowing that there is a gap between how their understanding
-      of the DOM and JavaScript, there are clear ways to bridge between them.</p>
+    <p>The map can never be complete nor perfectly accurate. However, knowing a
+      general direction to go is better than navigating completely in the dark.
+      For example, if the above illustration is a representation of the current
+      strengths of a dev, and they find themselves stuck debugging a program
+      running in a web browser, knowing that there is a gap between how their
+      understanding of the DOM and JavaScript, there are clear ways to bridge
+      between them.</p>
     <figure class="breakout">
       <div class="ocean-map">
         <div class="islands">
@@ -208,7 +228,7 @@
           <div style="left: 140px; top: 250px;" class="small island">HTTP</div>
           <div style="left:  50px; top: 160px;" class="huge island">HTML</div>
           <div style="left: 100px; top: 120px;" class="small island">DOM</div>
-          <div style="left: 170px; top: 120px;" class="large island">JavaScript</div>
+          <div style="left: 170px; top: 120px;" class="large island">JS</div>
           <div style="left:     0; top: 90px;" class="island">CSS</div>
           <div style="left:  50px; top:  80px;" class="small island">Sass</div>
           <div style="left: -90px; top:  40px;" class="small island">JPEG</div>
@@ -221,13 +241,14 @@
           <div style="left: 115px; top: 100px;" class="problem">Problem!</div>
         </div>
       </div>
-      <figcaption>Identifying gaps in knowledge can be done by seeing how easily a dev traverses
-        between technologies they already know.</figcaption>
+      <figcaption>Identifying gaps in knowledge can be done by seeing how easily
+        a dev traverses between technologies they already know.</figcaption>
     </figure>
-    <p>Visualizing the situation this way might lead me to ask clarifying questions in an effort to
-      bridge that gap. In this circumstance it might lead to an exploration of the browser’s DOM
-      inspector, debugging console, and setting some breakpoints in the JavaScript source in order
-      to watch the data structures as they change.</p>
+    <p>Visualizing the situation this way might lead me to ask clarifying
+      questions in an effort to bridge that gap. In this circumstance it might
+      lead to an exploration of the browser’s DOM inspector, debugging console,
+      and setting some breakpoints in the JavaScript source in order to watch
+      the data structures as they change.</p>
     <figure class="breakout">
       <div class="ocean-map">
         <div class="islands">
@@ -237,7 +258,7 @@
           <div style="left: 140px; top: 250px;" class="small island">HTTP</div>
           <div style="left:  50px; top: 160px;" class="huge island">HTML</div>
           <div style="left: 100px; top: 120px;" class="small island">DOM</div>
-          <div style="left: 170px; top: 120px;" class="large island">JavaScript</div>
+          <div style="left: 170px; top: 120px;" class="large island">JS</div>
           <div style="left:     0; top: 90px;" class="island">CSS</div>
           <div style="left:  50px; top:  80px;" class="small island">Sass</div>
           <div style="left: -90px; top:  40px;" class="small island">JPEG</div>
@@ -247,18 +268,21 @@
           <div style="left: -63px; top: 199px;" class="tiny island">XML</div>
           <div style="left: 170px; top: 190px;" class="small island">JSON</div>
           <div style="left: 275px; top:   5px;" class="small island">SQL</div>
-          <div style="left: 136px; top: 142px;" class="new tiny island">Debugger</div>
+          <div style="left: 136px; top: 142px;" class="new tiny island"
+          >Debugger</div>
         </div>
       </div>
-      <figcaption>A new technology island created between two distant ones helps to bridge knowledge
-        gaps and starts building confidence in a new area of the water.</figcaption>
+      <figcaption>A new technology island created between two distant ones helps
+        to bridge knowledge gaps and starts building confidence in a new area of
+        the water.</figcaption>
     </figure>
-    <p>As lucky as I’ve been with this mental model, yours will be different. However you
-      visualize it, learning new tech is always easier when new knowledge can be tied back to
-      something we’re already confident with. So, when you go to mentor another dev, try to develop
-      a mental model of the technologies they have confidence with. It might help to give direction
-      that leaves them feeling empowered to build robust connections between their existing
-      expertise. 🏝</p>
+    <p>As lucky as I’ve been with this mental model, yours will be different.
+      However you visualize it, learning new tech is always easier when new
+      knowledge can be tied back to something we’re already confident with. So,
+      when you go to mentor another dev, try to develop a mental model of the
+      technologies they have confidence with. It might help to give direction
+      that leaves them feeling empowered to build robust connections between
+      their existing expertise. 🏝</p>
   </main>
   <footer>
     <p><small>© 2021 David VanDusen</small></p>
