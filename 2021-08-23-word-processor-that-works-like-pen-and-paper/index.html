@@ -58,57 +58,132 @@
 <article>
   <header>
     <h1>Word Processor That Works Like Pen and Paper</h1>
-    <p>Published on <time>August 23, 2021</time> by <a href="https://davidvandusen.com/">David VanDusen</a>.</p>
+    <p>Published on <time>August 23, 2021</time> by
+      <a href="https://davidvandusen.com/">David VanDusen</a>.</p>
   </header>
   <main>
-    <p>Writing on a computer has a ton of advantages over ink on paper: you can undo mistakes, insert new content into existing text, rearrange ideas, copy and paste, correct spelling and grammar…. These features make it easier to create polished documents—to turn a rough draft into a publishable work with few traces of the mistakes and dead-end ideas along the way. But, they make it unsuitable for some purposes, like keeping an authentic journal.</p>
-    <p>Furthermore, perhaps writing with the constraints of pen and paper helps develop better habits, like thinking through how ideas should be organized and worded before setting them down. (Not to mention practice writing without typos.) And maybe we have become less mindful of how we come across in writing because we’re too accustomed to the ease by which we can reword our thoughts before committing to them.</p>
-    <p>Last week, I picked up where I had left off several months earlier in Becoming a Technical Leader by Gerald M. Weinberg. I was on chapter 7, “A Tool for Developing Self-Awareness.” Weinberg challenges the reader to, “Starting now, and continuing for three months, spend five minutes each day writing in a personal journal.” He recommends investing in a nice notebook and pen, but using a word processor may be OK in some situations.
-    </p>
+    <p>Writing on a computer has a ton of advantages over ink on paper: you can
+      undo mistakes, insert new content into existing text, rearrange ideas,
+      copy and paste, correct spelling and grammar…. These features make it
+      easier to create polished documents—to turn a rough draft into a
+      publishable work with few traces of the mistakes and dead-end ideas along
+      the way. But, they make it unsuitable for some purposes, like keeping an
+      authentic journal.</p>
+    <p>Furthermore, perhaps writing with the constraints of pen and paper helps
+      develop better habits, like thinking through how ideas should be organized
+      and worded before setting them down. (Not to mention practice writing
+      without typos.) And maybe we have become less mindful of how we come
+      across in writing because we’re too accustomed to the ease by which we can
+      reword our thoughts before committing to them.</p>
+    <p>Last week, I picked up where I had left off several months earlier in
+      Becoming a Technical Leader by Gerald M. Weinberg. I was on chapter 7, “A
+      Tool for Developing Self-Awareness.” Weinberg challenges the reader to,
+      “Starting now, and continuing for three months, spend five minutes each
+      day writing in a personal journal.” He recommends investing in a nice
+      notebook and pen, but using a word processor may be OK in some
+      situations.</p>
     <figure>
       <blockquote>
-        <p>If you do decide to use a computer, though, don’t go back and revise previous entries. Later, when you want to review what you’ve written, you’ll wish you had your original impressions. Instead, get a printed copy and paste it in a notebook, preferably hardbound, with dated pages.</p>
+        <p>If you do decide to use a computer, though, don’t go back and revise
+          previous entries. Later, when you want to review what you’ve written,
+          you’ll wish you had your original impressions. Instead, get a printed
+          copy and paste it in a notebook, preferably hardbound, with dated
+          pages.</p>
       </blockquote>
-      <figcaption>From chapter 7 of <cite><a href="https://www.dorsethouse.com/books/btl.html">Becoming a Technical Leader</a></cite> by Gerald M. Weinberg.
-      </figcaption>
+      <figcaption>From chapter 7 of
+        <cite><a href="https://www.dorsethouse.com/books/btl.html">Becoming a
+          Technical Leader</a></cite> by Gerald M. Weinberg.</figcaption>
     </figure>
-    <p>Through numerous anecdotes, he makes a case that the value of a journal comes from the honesty and candidness of its contents, which emerge in part from the constraints of the medium.</p>
-    <p>The book is from 1986, long before our default computing mindset changed to expect everything to be saved to the cloud and all our data accessible from any device. We no longer need to be at a desk in order to use a word processor. How might that affect the advice about journaling using a word processor?</p>
-    <p>Personally, I don’t know where I’ll be when I get my five minutes to write in my journal. Yes, I could carry a paper journal and pen with me, but I already have a word processor in my pocket. I also don’t know where I’ll be when I want to read my journal. If I’m sitting at my desk, I’ll read it on my PC; in my recliner, on my tablet; on the throne, on my phone.</p>
-    <p>Following are experiments exploring the idea of modifying a word processor to offer the benefits of the constraints that come from writing with pen on paper. View this page’s source to see the code for the examples.</p>
+    <p>Through numerous anecdotes, he makes a case that the value of a journal
+      comes from the honesty and candidness of its contents, which emerge in
+      part from the constraints of the medium.</p>
+    <p>The book is from 1986, long before our default computing mindset changed
+      to expect everything to be saved to the cloud and all our data accessible
+      from any device. We no longer need to be at a desk in order to use a word
+      processor. How might that affect the advice about journaling using a word
+      processor?</p>
+    <p>Personally, I don’t know where I’ll be when I get my five minutes to
+      write in my journal. Yes, I could carry a paper journal and pen with me,
+      but I already have a word processor in my pocket. I also don’t know where
+      I’ll be when I want to read my journal. If I’m sitting at my desk, I’ll
+      read it on my PC; in my recliner, on my tablet; on the throne, on my
+      phone.</p>
+    <p>Following are experiments exploring the idea of modifying a word
+      processor to offer the benefits of the constraints that come from writing
+      with pen on paper. View this page’s source to see the code for the
+      examples.</p>
     <hr />
-    <p>There are several ways to create a text editor in a web browser. One is the <code>&lt;textarea&gt;</code> element. This has limitations, though, because it can’t contain descendant elements—it’s for plain-text only.</p>
+    <p>There are several ways to create a text editor in a web browser. One is
+      the <code>&lt;textarea&gt;</code> element. This has limitations, though,
+      because it can’t contain descendant elements—it’s for plain-text only.</p>
     <figure>
-      <label><textarea id="demo1" class="demo-textarea" spellcheck="false">The contents of this humble <code>&amp;lt;textarea&amp;gt;</code> can’t be marked up.</textarea></label>
-      <figcaption>Example of a <code>&lt;textarea&gt;</code> with HTML markup in its value, showing that the markup is interpreted as text rather than HTML tags.
-      </figcaption>
+      <label>
+        <textarea
+          id="demo1"
+          class="demo-textarea"
+          spellcheck="false"
+        >The contents of this humble <code>&amp;lt;textarea&amp;gt;</code> can’t be marked up.</textarea>
+      </label>
+      <figcaption>Example of a <code>&lt;textarea&gt;</code> with HTML markup in
+        its value, showing that the markup is interpreted as text rather than
+        HTML tags.</figcaption>
     </figure>
-    <p>Adding the <code>contenteditable</code> attribute to an element doesn’t suffer from that limitation, so that’s what I’ll be using for my experiments.
-    </p>
+    <p>Adding the <code>contenteditable</code> attribute to an element doesn’t
+      suffer from that limitation, so that’s what I’ll be using for my
+      experiments.</p>
     <figure>
-      <div contenteditable id="demo2" class="demo-contenteditable" spellcheck="false">The contents of this <code>&lt;div&gt;</code> element with the <code>contenteditable</code> attribute can be edited as well as formatted.
-      </div>
-      <figcaption>Example of a <code>&lt;div&gt;</code> element with the <code>contenteditable</code> attribute, showing that nested HTML elements are interpreted normally as well as content being editable like a form input.
-      </figcaption>
+      <div
+        contenteditable
+        id="demo2"
+        class="demo-contenteditable"
+        spellcheck="false">The contents of this <code>&lt;div&gt;</code> element
+        with the <code>contenteditable</code> attribute can be edited as well as
+        formatted.</div>
+      <figcaption>Example of a <code>&lt;div&gt;</code> element with the
+        <code>contenteditable</code> attribute, showing that nested HTML
+        elements are interpreted normally as well as content being editable like
+        a form input.</figcaption>
     </figure>
-    <p>There are some basic modifications that can be made to an editable element that achieve a few of the constraints of pen and paper writing.</p>
+    <p>There are some basic modifications that can be made to an editable
+      element that achieve a few of the constraints of pen and paper
+      writing.</p>
     <ul>
-      <li>The browser’s integrated spell checker can be disabled by setting the <code>spellcheck</code> attribute of the element to <code>false</code>.</li>
-      <li>Edits other than normal text entry can be prevented by adding a handler for the <code>beforeinput</code> event that calls <code>preventDefault()</code> on it if the <code>inputType</code> is anything other than <code>"insertText"</code>, <code>"insertLineBreak"</code> or <code>"insertParagraph"</code>. This prevents most cutting, pasting, dragging and dropping text, undoing, and deleting.</li>
-      <li>Additions of text and newlines can be forced to come at the end of the input by updating the <code>Selection</code> in the <code>beforeinput</code> handler, preventing editing text that was already written.</li>
+      <li>The browser’s integrated spell checker can be disabled by setting the
+        <code>spellcheck</code> attribute of the element to
+        <code>false</code>.</li>
+      <li>Edits other than normal text entry can be prevented by adding a
+        handler for the <code>beforeinput</code> event that calls
+        <code>preventDefault()</code> on it if the <code>inputType</code> is
+        anything other than <code>"insertText"</code>,
+        <code>"insertLineBreak"</code> or <code>"insertParagraph"</code>. This
+        prevents most cutting, pasting, dragging and dropping text, undoing, and
+        deleting.</li>
+      <li>Additions of text and newlines can be forced to come at the end of the
+        input by updating the <code>Selection</code> in the
+        <code>beforeinput</code> handler, preventing editing text that was
+        already written.</li>
     </ul>
-    <p>⚠️ These simple hacks don’t work for IME composition, like virtual keyboards on phones and multilingual input methods. To get the intended experience, try these examples with a hardware keyboard with keys mapped directly to characters.</p>
+    <p>⚠️ These simple hacks don’t work for IME composition, like virtual
+      keyboards on phones and multilingual input methods. To get the intended
+      experience, try these examples with a hardware keyboard with keys mapped
+      directly to characters.</p>
     <figure>
-      <div id="demo3" class="demo-contenteditable">Add to this text to try out the modified input.</div>
+      <div id="demo3" class="demo-contenteditable">Add to this text to try out
+        the modified input.</div>
       <script>
         demo3.contentEditable = "true";
         demo3.spellcheck = false;
         demo3.addEventListener("beforeinput", event => {
           // Prevent all input other than typing.
-          if (!["insertText", "insertLineBreak", "insertParagraph"].includes(event.inputType)) {
+          const typingInputTypes = [
+            "insertText",
+            "insertLineBreak",
+            "insertParagraph"
+          ];
+          if (!typingInputTypes.includes(event.inputType)) {
             event.preventDefault();
           }
-          // Place the cursor at the end of the text before adding typed characters.
+          // Place the cursor at the end of the text before adding characters.
           const selection = window.getSelection();
           selection.removeAllRanges();
           const inputRange = document.createRange();
@@ -117,18 +192,39 @@
           selection.collapseToEnd();
         });
       </script>
-      <figcaption>Example of an element that only allows content to be added by typing at the end—no pasting, no undo, and no deleting text once it’s been written.</figcaption>
+      <figcaption>Example of an element that only allows content to be added by
+        typing at the end—no pasting, no undo, and no deleting text once it’s
+        been written.</figcaption>
     </figure>
-    <p>Further modifications can be made to add features that are possible when writing by hand.</p>
+    <p>Further modifications can be made to add features that are possible when
+      writing by hand.</p>
     <ul>
-      <li>Text can be underlined to draw attention to it. Marking text multiple times can add more marks under the text.</li>
-      <li>Erroneous text can be struck out. Striking out multiple times can visually redact the text by completely obscuring it.</li>
+      <li>Text can be underlined to draw attention to it. Marking text multiple
+        times can add more marks under the text.</li>
+      <li>Erroneous text can be struck out. Striking out multiple times can
+        visually redact the text by completely obscuring it.</li>
     </ul>
-    <p>In order to add these features, when the user shows an intent to format or delete content, the selected text can be nested in an inline formatting element (such as <code>&lt;del&gt;</code> for deleted text.) CSS can be used to add more markings to formatted text that is nested multiple times.</p>
-    <p>One problem that arises when trying to format text across lines stems from the browser’s default line breaking behaviour, which is to wrap subsequent lines in <code>&lt;div&gt;</code>s. In order to keep the formatting code simple, <code>"insertLineBreak"</code> and <code>"insertParagraph"</code> input intents can be changed to simply add <code>&lt;br&gt;</code>s instead.</p>
-    <p>Another problem is with the way DOM <code>Range</code>s work. When there is a non-text node as the last child with text content in the input, new text will be added into that element. That would be a problem when the last node is a formatting element because there would be no way to break out of it. To address that, a zero width no-break space character can be added after any trailing formatting element. During subsequent text input events, the unnecessary space characters can be removed.</p>
+    <p>In order to add these features, when the user shows an intent to format
+      or delete content, the selected text can be nested in an inline formatting
+      element (such as <code>&lt;del&gt;</code> for deleted text.) CSS can be
+      used to add more markings to formatted text that is nested multiple
+      times.</p>
+    <p>One problem that arises when trying to format text across lines stems
+      from the browser’s default line breaking behaviour, which is to wrap
+      subsequent lines in <code>&lt;div&gt;</code>s. In order to keep the
+      formatting code simple, <code>"insertLineBreak"</code> and
+      <code>"insertParagraph"</code> input intents can be changed to simply add
+      <code>&lt;br&gt;</code>s instead.</p>
+    <p>Another problem is with the way DOM <code>Range</code>s work. When there
+      is a non-text node as the last child with text content in the input, new
+      text will be added into that element. That would be a problem when the
+      last node is a formatting element because there would be no way to break
+      out of it. To address that, a zero width no-break space character can be
+      added after any trailing formatting element. During subsequent text input
+      events, the unnecessary space characters can be removed.</p>
     <figure>
-      <div id="demo4" class="demo-contenteditable">Try writing, <u>marking</u>, and deleting text in this input.</div>
+      <div id="demo4" class="demo-contenteditable">Try writing, <u>marking</u>,
+        and deleting text in this input.</div>
       <script>
         demo4.contentEditable = "true";
         demo4.spellcheck = false;
@@ -138,42 +234,64 @@
           if (!normalInputTypes.includes(event.inputType)) {
             event.preventDefault();
           }
-          // Instead of the default behaviour for adding newlines, just add a <br> at the end whenever
-          // the user tries to add a newline. This prevents awkwardness when formatting tags are added
-          // across lines, since the default behaviour wraps lines in <div>s.
+          // Instead of the default behaviour for adding newlines, just add a
+          // <br> at the end whenever the user tries to add a newline. This
+          // prevents awkwardness when formatting tags are added across lines,
+          // since the default behaviour wraps lines in <div>s.
           const lineBreakInputTypes = ["insertLineBreak", "insertParagraph"];
           if (lineBreakInputTypes.includes(event.inputType)) {
             event.target.appendChild(document.createElement("br"));
           }
-          // Styled formatting is added as unarticulated annotations by putting selected text in <u>s.
-          // Deletion works similarly. It puts selected text in <del>s instead of deleting it.
+          // Styled formatting is added as unarticulated annotations by putting
+          // selected text in <u>s. Deletion works similarly. It puts selected
+          // text in <del>s instead of deleting it.
           let formattingTag;
-          const formattingInputTypes = ["formatBold", "formatItalic", "formatUnderline"];
+          const formattingInputTypes = [
+            "formatBold",
+            "formatItalic",
+            "formatUnderline"
+          ];
           if (formattingInputTypes.includes(event.inputType)) {
             formattingTag = "u";
           }
-          if (event.inputType.startsWith("delete") || event.inputType === "formatStrikeThrough") {
+          const isDeletionEvent = event.inputType.startsWith("delete");
+          if (isDeletionEvent || event.inputType === "formatStrikeThrough") {
             formattingTag = "del";
           }
           if (formattingTag) {
             const targetRanges = event.getTargetRanges();
-            if (!window.getSelection().isCollapsed && targetRanges.length === 1) {
+            const isTextSelected = !window.getSelection().isCollapsed;
+            if (isTextSelected && targetRanges.length === 1) {
               const staticRange = targetRanges[0];
               const formatRange = document.createRange();
-              formatRange.setStart(staticRange.startContainer, staticRange.startOffset);
-              formatRange.setEnd(staticRange.endContainer, staticRange.endOffset);
+              formatRange.setStart(
+                staticRange.startContainer,
+                staticRange.startOffset
+              );
+              formatRange.setEnd(
+                staticRange.endContainer,
+                staticRange.endOffset
+              );
               const contents = formatRange.extractContents();
               const formattedElement = document.createElement(formattingTag);
               formatRange.insertNode(formattedElement);
               formattedElement.appendChild(contents);
             }
           }
-          // Ensure there's a text node at the end for typing to be inserted at, otherwise it'll end
-          // up inside the last formatting tag, or the cursor won't appear after <br>s and look weird.
-          event.target.innerHTML = event.target.innerHTML.replace(/\uFEFF/g, "");
-          const lastNode = event.target.childNodes[event.target.childNodes.length - 1];
-          if (lastNode.nodeType === 3 && lastNode.length === 0 || lastNode.nodeType !== 3) {
-            event.target.insertAdjacentText("beforeend", "\uFEFF");
+          // Ensure there's a text node at the end for typing to be inserted at,
+          // otherwise it'll end up inside the last formatting tag, or the
+          // cursor won't appear after <br>s and look weird.
+          const cursorTarget = "\uFEFF";
+          const cursorTargetRegExp = new RegExp(cursorTarget, "g");
+          event.target.innerHTML = event.target.innerHTML.replace(
+            cursorTargetRegExp,
+            ""
+          );
+          const lastNodeIndex = event.target.childNodes.length - 1;
+          const lastNode = event.target.childNodes[lastNodeIndex];
+          const isTextNode = lastNode.nodeType === 3;
+          if (isTextNode && lastNode.length === 0 || !isTextNode) {
+            event.target.insertAdjacentText("beforeend", cursorTarget);
           }
           // Place the cursor at the end of the text.
           const selection = window.getSelection();
@@ -184,22 +302,42 @@
           selection.collapseToEnd();
         });
       </script>
-      <figcaption>Example of an element that treats deletion and formatting in an ‘additive only’ way. Text can be marked with <kbd>cmd/ctrl + B/I</kbd>, and crossed out with <kbd>delete/backspace</kbd>.</figcaption>
+      <figcaption>Example of an element that treats deletion and formatting in
+        an ‘additive only’ way. Text can be marked with <kbd>cmd/ctrl +
+          B/I</kbd>, and crossed out with
+        <kbd>delete/backspace</kbd>.</figcaption>
     </figure>
-    <p>To turn this demo into a proper journal there are a few more features that may be desired.</p>
+    <p>To turn this demo into a proper journal there are a few more features
+      that may be desired.</p>
     <ul>
-      <li>Each time a new session is started, the current date and time can be automatically added.</li>
-      <li>Previous journal entries can not have any content or markings added.</li>
+      <li>Each time a new session is started, the current date and time can be
+        automatically added.</li>
+      <li>Previous journal entries can not have any content or markings
+        added.</li>
     </ul>
-    <p>An example of these features, including persistence and other improvements, can be seen at <a href="https://journal.figureandsound.com/">journal.figureandsound.com</a>.</p>
+    <p>An example of these features, including persistence and other
+      improvements, can be seen at <a
+        href="https://journal.figureandsound.com/"
+      >journal.figureandsound.com</a>.
+    </p>
     <hr />
-    <p>There are several other features of ink on paper writing that might be suitable for an application like this. For example:</p>
+    <p>There are several other features of ink on paper writing that might be
+      suitable for an application like this. For example:</p>
     <ul>
       <li>Notes can be written in the margins of the pages.</li>
-      <li>Corrections can be added between the lines of text in the way that one might edit a double-spaced manuscript.</li>
+      <li>Corrections can be added between the lines of text in the way that one
+        might edit a double-spaced manuscript.</li>
     </ul>
-    <p>And, somehow, accessibility to different input methods such as IME composition needs to be figured out. Also, an interface should be added for formatting that doesn’t rely on shortcuts only available to physical keyboard users.</p>
-    <p>That said, I still want to challenge you to try to write a paragraph or two on <a href="https://journal.figureandsound.com/">journal.figureandsound.com</a> (with a physical keyboard, as noted above) and ask yourself whether these constraints make you think differently about writing. ✍</p>
+    <p>And, somehow, accessibility to different input methods such as IME
+      composition needs to be figured out. Also, an interface should be added
+      for formatting that doesn’t rely on shortcuts only available to physical
+      keyboard users.</p>
+    <p>That said, I still want to challenge you to try to write a paragraph or
+      two on <a
+        href="https://journal.figureandsound.com/"
+      >journal.figureandsound.com</a> (with a physical keyboard, as noted above)
+      and ask yourself whether these constraints make you think differently
+      about writing. ✍</p>
   </main>
   <footer>
     <p><small>© 2021 David VanDusen</small></p>
