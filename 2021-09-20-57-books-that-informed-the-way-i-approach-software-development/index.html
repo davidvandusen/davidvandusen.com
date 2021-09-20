@@ -7,16 +7,16 @@
   <link rel="stylesheet" href="/site.css" />
   <title>57 Books That Informed The Way I Approach Software Development</title>
   <style>
-    #timeline {
+    #toc {
       font-family: var(--sans-serif);
       font-size: 0.875rem;
       list-style: square;
     }
-    #timeline a {
+    #toc a {
       font-weight: 600;
       margin-right: 0.5rem;
     }
-    #timeline small {
+    #toc small {
       color: #777;
       font-weight: 300;
     }
@@ -55,50 +55,172 @@
       Software Development By Reading Books</a>. This gave me the idea that it
       might be a fun challenge to recall some key and foundational books I’ve
       read, and roughly the order I read them.</p>
-    <p>There have been plenty of tech books I wouldn’t consider formative, and
-      they won’t be included. On the flip side, there have been some books that
-      were influential to the way I approach software development that aren’t
-      tech books, so I’ll mention them, too.</p>
+    <p>There have been plenty of tech books I read over the years that I
+      wouldn’t consider formative, so I won’t mention them. On the flip side,
+      there have been some books that were influential to the way I approach
+      software development that aren’t tech books, so they’re in the list.</p>
     <p>Ok, buckle up for a ride down memory lane!</p>
     <aside>
-      <p>If you’re inspired to read any of these books, please check your local
-        libraries and used book stores before purchasing new copies. Buy them
-        directly from the author if that’s an option.</p>
+      <p>If you’re inspired to read any of these books, check your local
+        libraries, used book stores, and friends’ bookshelves before purchasing
+        new copies. Otherwise, buy directly from authors if that’s an
+        option.</p>
     </aside>
 
     <hr />
 
-    <h2>Timeline</h2>
-    <ol id="timeline"></ol>
-    <script>
-      window.addEventListener('DOMContentLoaded', () => {
-        const timeline = document.getElementById('timeline');
-        Array.from(document.getElementsByTagName('h2'))
-          .slice(1)
-          .forEach((heading) => {
-            const sectionItem = document.createElement('li');
-            const sectionLink = document.createElement('a');
-            const id = heading
-              .innerText
-              .replace(/&\w+;/g, '')
-              .replace(/[^\w -]+/g, '')
-              .replace(/\W+/g, '-')
-              .toLowerCase();
-            heading.id = id;
-            sectionLink.href = `#${id}`;
-            sectionLink.innerHTML = heading.innerText;
-            const subheadSmall = document.createElement('small');
-            subheadSmall.innerHTML = heading.nextElementSibling.innerText;
-            sectionItem.appendChild(sectionLink);
-            sectionItem.appendChild(subheadSmall);
-            timeline.appendChild(sectionItem);
-          });
-        });
-    </script>
+    <h2>Table of contents</h2>
+    <ol id="toc">
+      <li><a href="#zzt-oop-programming-language">ZZT-OOP Programming
+        Language</a> <small>1991, Tim Sweeny</small></li>
+      <li><a href="#microsoft-ms-dos-operating-system">Microsoft® MS-DOS®
+        Operating System version 5.0 User’s Guide and Reference</a> <small>1991,
+        Microsoft</small></li>
+      <li><a href="#ti-83-guidebook">TI-83 Guidebook</a> <small>1996, Texas
+        Instruments</small></li>
+      <li><a href="#html-4-for-the-world-wide-web">HTML 4 for the World Wide Web
+        Visual Quickstart Guide (Fourth Edition)</a> <small>1999, Elizabeth
+        Castro</small></li>
+      <li><a href="#teach-yourself-visual-basic-6-in-24-hours">SAMS Teach
+        Yourself Visual Basic 6 in 24 Hours</a> <small>1999, Greg Perry with
+        Sanjaya Hettihewa</small></li>
+      <li><a href="#java-2">Java 2: The Complete Reference (Third Edition)</a>
+        <small>1999, Patrick Naughton and Herbert Schildt</small></li>
+      <li><a href="#pure-javascript">Pure JavaScript: A Code-Intensive Premium
+        Reference</a> <small>1999, R. Allen Wyke, Jason D. Gilliam, and Charlton
+        Ting</small></li>
+      <li><a href="#beginning-perl">Beginning Perl</a> <small>2000, Simon Cozens
+        with Peter Wainwright</small></li>
+      <li><a href="#web-database-applications">Web Database Applications with
+        PHP &amp; MySQL: Building Effective Database-Driven Web Sites</a>
+        <small>2002, Hugh E. Williams and David Lane</small></li>
+      <li><a href="#designing-with-web-standards">Designing with Web
+        Standards</a> <small>2003, Jeffrey Zeldman</small></li>
+      <li><a href="#the-zen-of-css-design">The
+        Zen of CSS Design: Visual Enlightenment for the Web</a> <small>2005,
+        Dave Shea and Molly E. Holzschlag</small></li>
+      <li><a href="#bulletproof-web-design">Bulletproof Web Design</a>
+        <small>2005, Dan Cederholm</small></li>
+      <li><a href="#dont-make-me-think">Don’t Make Me Think: A Common Sense
+        Approach to Web Usability (Second Edition)</a> <small>2005, Steve
+        Krug</small></li>
+      <li><a href="#using-microformats">Using Microformats</a> <small>2006,
+        Brian Suda</small></li>
+      <li><a href="#web-accessibility">Web Accessibility: Web Standards and
+        Regulatory Compliance</a> <small>2006, Richard Rutter, Patrick H. Lauke,
+        Cynthia Waddell, Jim Thatcher, Shawn Lawton Henry, Bruce Lawson, Andrew
+        Kirkpatrick, Christian Heilmann, Michael R. Burks, Bob Regan, and Mark
+        Urban</small></li>
+      <li><a href="#bulletproof-ajax">Bulletproof Ajax</a> <small>2007, Jeremy
+        Keith</small></li>
+      <li><a href="#the-art-and-science-of-css">The Art &amp; Science of CSS</a>
+        <small>2007, Cameron Adams, Jina Bolton, David Johnson, Steve Smith, and
+        Jonathan Snook</small></li>
+      <li><a href="#restful-web-services">RESTful Web Services: Web Services for
+        the Real World</a> <small>2007, Leonard Richardson and Sam
+        Ruby</small></li>
+      <li><a href="#javascript-the-good-parts">JavaScript: The Good Parts</a>
+        <small>2008, Douglas Crockford</small></li>
+      <li><a href="#high-performance-web-sites">High Performance Web Sites:
+        Essential Knowledge for Frontend Engineers</a> <small>2007, Steve
+        Souders</small></li>
+      <li><a href="#even-faster-web-sites">Even Faster Web Sites: Performance
+        Best Practices for Web Developers</a> <small>2009, Steve
+        Souders</small></li>
+      <li><a href="#getting-things-done">Getting Things Done: The Art of
+        Stress-Free Productivity</a> <small>2002, David Allen</small></li>
+      <li><a href="#getting-real">Getting Real: The smarter, faster, easier way
+        to build a successful web application</a> <small>2006,
+        37Signals</small></li>
+      <li><a href="#xml">XML: Visual QuickStart Guide (Second Edition)</a>
+        <small>2008, Kevin Howard Goldberg</small></li>
+      <li><a href="#typography-for-lawyers">Typography for Lawyers: Essential
+        Tools for Polished &amp; Persuasive Documents</a> <small>2010, Matthew
+        Butterick</small></li>
+      <li><a href="#beginning-asp-dotnet">Beginning ASP.NET 4 in C# 2010</a>
+        <small>2010, Matthew MacDonald</small></li>
+      <li><a href="#pro-asp-dotnet">Pro ASP.NET 4 in C# 2010 (Fourth
+        Edition)</a> <small>2010, Matthew MacDonald, Adam Freeman, and Mario
+        Szpuszta</small></li>
+      <li><a href="#pro-git">Pro Git</a> <small>2009, Schott Chacon</small></li>
+      <li><a href="#apache-maven-3-cookbook">Apache Maven 3 Cookbook</a>
+        <small>2011, Srirangan</small></li>
+      <li><a href="#effective-java">Effective Java (Second Edition)</a>
+        <small>2008, Joshua Bloch</small></li>
+      <li><a href="#design-patterns">Design Patterns: Elements of Reusable
+        Object-Oriented Software</a> <small>1994, Erich Gamma, Richard Helm,
+        Ralph Johnson, and John Vlissides</small></li>
+      <li><a href="#refactoring">Refactoring: Improving the Design of Existing
+        Code</a> <small>1999, Martin Fowler with Kent Beck, John Brant, William
+        Opdyke, and Don Roberts</small></li>
+      <li><a href="#clean-code">Clean Code: A Handbook of Agile Software
+        Craftsmanship</a> <small>2008, Robert C. Martin</small></li>
+      <li><a href="#practical-typography">Butterick’s Practical Typography</a>
+        <small>2013, Matthew Butterick</small></li>
+      <li><a href="#developing-backbonejs-applications">Developing Backbone.js
+        Applications: Building Better JavaScript Applications</a> <small>2013,
+        Addy Osmani</small></li>
+      <li><a href="#functional-javascript">Functional JavaScript: Introducing
+        Functional Programming with Underscore.js</a> <small>2013, Michael
+        Fogus</small></li>
+      <li><a href="#effective-javascript">Effective JavaScript: 68 Specific Ways
+        to Harness the Power of JavaScript</a> <small>2012, David
+        Herman</small></li>
+      <li><a href="#beautiful-evidence">Beautiful Evidence</a> <small>2006,
+        Edward Tufte</small></li>
+      <li><a href="#the-22-immutable-laws-of-branding">The 22 Immutable Laws of
+        Branding</a> <small>1998, Al Ries and Laura Ries</small></li>
+      <li><a href="#inside-the-tornado">Inside the Tornado: Strategies for
+        Developing, Leveraging, and Surviving Hypergrowth Markets</a>
+        <small>2005, Geoffrey A. Moore</small></li>
+      <li><a href="#crossing-the-chasm">Crossing the Chasm, 3rd Edition:
+        Marketing and Selling Disruptive Products to Mainstream Customers</a>
+        <small>2014, Geoffrey A. Moore</small></li>
+      <li><a href="#data-science-from-scratch">Data Science from Scratch: First
+        Principles with Python</a> <small>2015, Joel Grus</small></li>
+      <li><a href="#cracking-the-coding-interview">Cracking the Coding
+        Interview: 189 Programming Questions and Solutions (6th Edition)</a>
+        <small>2015, Gayle Laakmann McDowell</small></li>
+      <li><a href="#apprenticeship-patterns">Apprenticeship Patterns: Guidance
+        for the Aspiring Software Craftsman</a> <small>2009, David H. Hoover and
+        Adewale Oshineye</small></li>
+      <li><a href="#97-things-every-programmer-should-know">97 Things Every
+        Programmer Should Know: Collective Wisdom from the Experts</a>
+        <small>2010, Kevlin Henney</small></li>
+      <li><a href="#securing-the-perimeter">Securing the Perimeter: Deploying
+        Identity and Access Management with Free Open Source Software</a>
+        <small>2018, Michael Schwartz and Maciuj Machulak</small></li>
+      <li><a href="#docker-deep-dive">Docker Deep Dive</a> <small>2017, Nigel
+        Poulton</small></li>
+      <li><a href="#the-kubernetes-book">The Kubernetes Book</a> <small>2017,
+        Nigel Poulton</small></li>
+      <li><a href="#deep-work">Deep Work: Rules for Focused Success in a
+        Distracted World</a> <small>2016, Cal Newport</small></li>
+      <li><a href="#http2-in-action">HTTP/2 in Action</a> <small>2019, Barry
+        Pollard</small></li>
+      <li><a href="#shape-up">Shape Up: Stop Running in Circles and Ship Work
+        that Matters</a> <small>2019, Ryan Singer</small></li>
+      <li><a href="#tcpip-illustrated">TCP/IP Illustrated, Volume 1: The
+        Protocols (Second Edition)</a> <small>2011, Kevin R. Fall and W. Richard
+        Stevens</small></li>
+      <li><a href="#security-engineering">Security Engineering: A Guide to
+        Building Dependable Distributed Systems (Third Edition)</a> <small>2020,
+        Ross Anderson</small></li>
+      <li><a href="#zzt">ZZT</a> <small>2014, Anna Anthropy</small></li>
+      <li><a href="#the-psychology-of-computer-programming">The Psychology of
+        Computer Programming: Silver Anniversary Edition</a> <small>1971, 1998,
+        Gerald M. Weinberg</small></li>
+      <li><a href="#becoming-a-technical-leader">Becoming a Technical Leader: An
+        Organic Problem-Solving Approach</a> <small>1986, Gerald M.
+        Weinberg</small></li>
+      <li><a href="#unicode-explained">Unicode Explained: Internationalize
+        Documents, Programs, and Web Sites</a> <small>2006, Jukka K.
+        Korpela</small></li>
+    </ol>
 
     <hr />
 
-    <h2>
+    <h2 id="zzt-oop-programming-language">
       <img
         src="zzt-oop-manual.png"
         srcset="zzt-oop-manual@2x.png 2x"
@@ -108,20 +230,20 @@
         loading="lazy" />
       ZZT-OOP Programming Language</h2>
     <p class="subhead">1991, Tim Sweeny</p>
-    <p>The first entry is an exception to the rule, as it’s an in-program help
+    <p>The first entry is an exception to the rule since it’s an in-program help
       document and not a book. Stick with me, though!</p>
-    <p>Although I played around with my dad’s 286 a fair amount in the early
-      90’s, when he got a new Pentium machine with Windows in 1995, I inherited
-      the old clunker and began my programming journey.</p>
+    <p>I played around with my dad’s 286 a fair amount in the early 90’s, and
+      when he got a new Pentium machine with Windows in 1995, I inherited the
+      old clunker and began my programming journey.</p>
     <p>A game I was already familiar with in 1995, ZZT, came with a level editor
-      including its own programming language: ZZT-OOP. With unfettered access to
-      the computer, I took it on myself as a young’un to master this
-      language.</p>
+      with its own programming language: ZZT-OOP. With exclusive access to the
+      computer and the kind of free time that only kids have, I took it on
+      myself to master this language.</p>
     <p>The help document is organized much like a programming book—and you can
-      print it! It was my first foray into reading about software development,
-      and deserves to be included.</p>
+      print it! This was my first foray into reading about software
+      development.</p>
 
-    <h2>
+    <h2 id="microsoft-ms-dos-operating-system">
       <img
         src="ms-dos-reference.jpg"
         srcset="ms-dos-reference@2x.jpg 2x"
@@ -133,12 +255,12 @@
       Reference</h2>
     <p class="subhead">1991, Microsoft</p>
     <p>My dad insisted on keeping this book in proximity to the 286 when he gave
-      me the computer. So, it was around, I was feeling empowered by having
+      me the computer. So, it was around, and I was feeling empowered by having
       learned how to use a programming language, so I found myself reading this
       tome. It definitely helped me generalize what I had learned about
       computing.</p>
 
-    <h2>
+    <h2 id="ti-83-guidebook">
       <img
         src="ti-83-guidebook.jpg"
         srcset="ti-83-guidebook@2x.jpg 2x"
@@ -156,7 +278,7 @@
       suite of games of chance and transferring them to the other calculators
       by connecting them with wires.</p>
 
-    <h2>
+    <h2 id="html-4-for-the-world-wide-web">
       <img
         src="html-for-the-world-wide-web.jpg"
         srcset="html-for-the-world-wide-web@2x.jpg 2x"
@@ -168,16 +290,17 @@
       Edition)</h2>
     <p class="subhead">1999, Elizabeth Castro</p>
     <p>My girlfriend in 1999 was taking info-tech class at the same time as I
-      had phys-ed. Obviously, I skipped class to hang out with her in the
+      had phys-ed. Being a nerd, I skipped class to hang out with her in the
       computer lab. Although I never took info-tech, this book was an assigned
       reading in that class, and I grabbed a copy anyway.</p>
-    <p>A cool thing about this book was that it introduced me to Cascading
-      Stylesheets, which I would become a strong advocate for during the
-      “Browser Wars.” But, man, was CSS different back in the Internet Explorer
-      4 days. It’s telling that this is the fourth edition of a book whose first
-      edition came out three years earlier.</p>
+    <p>A memorable thing about this book was that it introduced me to Cascading
+      Stylesheets. My early, positive exposure to CSS would become an important
+      guidepost in my subsequent technical development. But, man, was CSS
+      different back in the Internet Explorer 4 days. It’s telling that this is
+      the fourth edition of a book whose first edition came out only three years
+      earlier.</p>
 
-    <h2>
+    <h2 id="teach-yourself-visual-basic-6-in-24-hours">
       <img
         src="teach-yourself-visual-basic-6.jpg"
         srcset="teach-yourself-visual-basic-6@2x.jpg 2x"
@@ -187,15 +310,12 @@
         loading="lazy" />
       SAMS Teach Yourself Visual Basic 6 in 24 Hours</h2>
     <p class="subhead">1999, Greg Perry with Sanjaya Hettihewa</p>
-    <p>I recall using the included IDE to build a tile-based RPG with my own
-      sprite art and doing my own sound engineering. I was actually focused on
-      being an artist and musician at this time in my life; programming was a
-      part-time job more than anything.</p>
-    <p>This would be the beginning and end of my interest in “Teach Yourself
-      <i>X</i> in <i>Y</i> Hours” books, not to mention proprietary programming
-      languages.</p>
+    <p>I recall using the IDE included on this book’s companion CD-ROM to build
+      a tile-based RPG with my own sprite art and sound design. I was focused on
+      being an artist and musician at this point; programming was just a
+      part-time job.</p>
 
-    <h2>
+    <h2 id="java-2">
       <img
         src="java-2-complete-reference.jpg"
         srcset="java-2-complete-reference.jpg 2x"
@@ -205,13 +325,13 @@
         loading="lazy" />
       Java 2: The Complete Reference (Third Edition)</h2>
     <p class="subhead">1999, Patrick Naughton and Herbert Schildt</p>
-    <p>At this point, I realized I was more interested in web development than
-      making desktop apps. I wanted to add interactivity to my websites, so the
-      obvious choice was to learn how to make Java Applets! Frustratingly, the
-      limitations of how the applets could interact with the content of the web
-      pages left me wanting something better.</p>
+    <p>I realized I was more interested in web development than desktop apps. I
+      wanted to add interactivity to my websites, and the obvious way to do that
+      was with Java Applets. Frustratingly, the limitations of how applets
+      could interact with the content of the web pages left me wanting something
+      more integrated.</p>
 
-    <h2>
+    <h2 id="pure-javascript">
       <img
         src="pure-javascript.jpg"
         srcset="pure-javascript@2x.jpg 2x"
@@ -222,15 +342,15 @@
       Pure JavaScript: A Code-Intensive Premium Reference</h2>
     <p class="subhead">1999, R. Allen Wyke, Jason D. Gilliam, and Charlton
       Ting</p>
-    <p>My first book on JavaScript was almost as thick as it was wide, thanks
-      in large part to the amount of content about <em>server-side
-      JavaScript</em>! That’s right, server-side JavaScript ten years before
-      Node.js. There was a big chunk about Netscape’s APIs, and another about
-      Microsoft’s. I never did play with any of that server-side stuff, but I
-      read and reread the core JavaScript syntax until I knew it inside and
-      out.</p>
+    <p>What I really wanted was JavaScript. My first book on JavaScript was
+      almost as thick as it was wide, thanks in large part to the amount of
+      content about <em>server-side JavaScript</em>! That’s right, server-side
+      JavaScript ten years before Node.js. There was a big chunk about
+      Netscape’s APIs, and another about Microsoft’s. I never did play with any
+      of that server-side stuff, but I reread the core JavaScript syntax until I
+      knew it by heart.</p>
 
-    <h2>
+    <h2 id="beginning-perl">
       <img
         src="beginning-perl.jpg"
         srcset="beginning-perl@2x.jpg 2x"
@@ -240,20 +360,20 @@
         loading="lazy" />
       Beginning Perl</h2>
     <p class="subhead">2000, Simon Cozens with Peter Wainwright</p>
-    <p>I picked up Perl as it became clear that I needed interactivity on the
-      server side. With this book’s <i>Introduction to CGI</i>, I got just that.
+    <p>I picked up Perl to fulfil the need to do server-side form processing and
+      persistence. With this book’s <i>Introduction to CGI</i>, I got just that.
       This is when I started to dig into Apache httpd, and get to know web
       servers more deeply.</p>
     <p>This was also my first deep dive into regular expressions. There’s
       something about the way regex are presented in this book that resulted in
       my ability to gain fluency that has lasted me my whole career.
       <a href="https://www.perl.org/books/beginning-perl/">Beginning Perl is
-      available online for free</a> now, so take a look at the <a
+      available online for free</a>, so take a look at the <a
       href="https://docs.google.com/viewer?url=https%3A%2F%2Fblob.perl.org%2Fbooks%2Fbeginning-perl%2F3145_Chap05.pdf"
-      ><i>Regular Expressions</i> chapter</a> yourself, if you’re interested. I
-      bet it still holds up!</p>
+      ><i>Regular Expressions</i> chapter</a> yourself, if you’re interested.
+      I’d bet it still holds up!</p>
 
-    <h2>
+    <h2 id="web-database-applications">
       <img
         src="web-database-applications.jpg"
         srcset="web-database-applications@2x.jpg 2x"
@@ -264,13 +384,13 @@
       Web Database Applications with PHP &amp; MySQL: Building Effective
       Database-Driven Web Sites</h2>
     <p class="subhead">2002, Hugh E. Williams and David Lane</p>
-    <p>Although the Perl book got me working with databases, this book is where
-      I really solidified the fundamentals. This was around the time that Web
-      2.0 was emerging: the “read-write Web.” This marked a big shift in the
-      kinds of software development projects I was taking on because of the
-      relative ease of shipping an app to a shared LAMP server.</p>
+    <p>Although the Perl book got me working with databases, this book is what
+      solidified the fundamentals. This was around the time that the Web 2.0
+      trend was emerging. Websites were expected to have interactive forms, now.
+      Coupled with the relative ease of shipping an app to a shared LAMP server,
+      this marked a major shift in the kinds of projects I was doing.</p>
 
-    <h2>
+    <h2 id="designing-with-web-standards">
       <img
         src="designing-with-web-standards.jpg"
         srcset="designing-with-web-standards@2x.jpg 2x"
@@ -280,11 +400,11 @@
         loading="lazy" />
       Designing with Web Standards</h2>
     <p class="subhead">2003, Jeffrey Zeldman</p>
-    <p>The orange one! This book got me really fired up about web standards and
-      thinking about the apps I was making as products that are meant to hit a
-      certain bar for quality.</p>
+    <p>As an artist, I always thought about what I was building from the
+      perspective of craft, and creating polished works. This book got me fired
+      up the level of craftsmanship I could achieve.</p>
 
-    <h2>
+    <h2 id="the-zen-of-css-design">
       <img
         src="zen-of-css-design.jpg"
         srcset="zen-of-css-design@2x.jpg 2x"
@@ -295,17 +415,18 @@
       The Zen of CSS Design: Visual Enlightenment for the Web</h2>
     <p class="subhead">2005, Dave Shea and Molly E. Holzschlag</p>
     <p>This book was based on Dave’s popular website,
-      <a href="http://www.csszengarden.com/">CSS Zen Garden</a>. I was lucky
-      enough to work with Dave for a while at Bench Accounting, and I can
-      confirm that he has a very structured way of thinking about design, which
-      I appreciate immensely.</p>
+      <a href="http://www.csszengarden.com/">CSS Zen Garden</a>, which many
+      folks who were doing web development back in the early 2000’s think fondly
+      on. I was even lucky enough to work with Dave for a while at Bench
+      Accounting, and I can confirm that he has a very structured way of
+      thinking about design, which I appreciate immensely.</p>
     <p>At the time I read this book, even though CSS had decent support in IE,
       Firefox, and Opera (I don’t know about Safari—not many Mac users to worry
       about back then,) most popular websites were still sliced images in HTML
       tables. The whole CSS Zen Garden <em>thing</em> was a big step forward for
       getting the industry to adopt the technology.</p>
 
-    <h2>
+    <h2 id="bulletproof-web-design">
       <img
         src="bulletproof-web-design.jpg"
         srcset="bulletproof-web-design@2x.jpg 2x"
@@ -319,11 +440,29 @@
       href="http://vault.simplebits.com/notebook/2005/06/28/bpwd/">announced
       this book</a>. I was already engaged with his approach to web design, so
       it was great to see his thoughts published in this format.</p>
-    <p>I had the pleasure of chatting with Dan at Web Directions North 2007, and
-      by that time I had already started implementing some of his ideas in my
+    <p>I had the pleasure of chatting with Dan at Web Directions North 2007, by
+      which time I had already started implementing some of his ideas in my
       projects, to great success.</p>
 
-    <h2>
+    <h2 id="dont-make-me-think">
+      <img
+        src="dont-make-me-think.jpg"
+        srcset="dont-make-me-think@2x.jpg 2x"
+        alt="cover of Don’t Make Me Think"
+        height="209"
+        width="160"
+        loading="lazy" />
+      Don’t Make Me Think: A Common Sense Approach to Web Usability (Second
+      Edition)</h2>
+    <p class="subhead">2005, Steve Krug</p>
+    <p>Many authors in my RSS feed had mentioned this book at some point. It
+      took me a while, and a second edition release, before I gave it a go. It
+      seems like it’d be a risk to publish a book where the content is just a
+      bunch of common sense, but lemme tell ya, it helps to have it printed on
+      paper when you need to convince someone that something is common
+      sense.</p>
+
+    <h2 id="using-microformats">
       <img
         src="using-microformats.jpg"
         srcset="using-microformats@2x.jpg 2x"
@@ -333,13 +472,15 @@
         loading="lazy" />
       Using Microformats</h2>
     <p class="subhead">2006, Brian Suda</p>
-    <p>I remember watching Microformats emerge and being very pumped about the
-      idea. When a downloadable PDF “book” about it became available, I just had
-      to show my support. Anything you’d ever want to know about Microformats is
-      on the <a href="https://microformats.org/wiki/Main_Page/">Microformats
+    <p>I was pumped about Microformats as it was emerging. Something felt so
+      right about having a broader alignment across the web about how common
+      kinds of content would be described. When a downloadable PDF “book” about
+      it became available, I had to show my support. That said, anything you’d
+      ever want to know about Microformats is on the
+      <a href="https://microformats.org/wiki/Main_Page/">Microformats
       wiki</a>.</p>
 
-    <h2>
+    <h2 id="web-accessibility">
       <img
         src="web-accessibility.jpg"
         srcset="web-accessibility@2x.jpg 2x"
@@ -351,34 +492,13 @@
     <p class="subhead">2006, Richard Rutter, Patrick H. Lauke, Cynthia Waddell,
       Jim Thatcher, Shawn Lawton Henry, Bruce Lawson, Andrew Kirkpatrick,
       Christian Heilmann, Michael R. Burks, Bob Regan, and Mark Urban</p>
-    <p>I had been following Bruce Lawson when he <a
-      href="https://brucelawson.co.uk/2006/web-accessibility-web-standards-and-regulatory-compliance/"
-      >announced</a> this book. Accessibility was a major consideration in the
-      work I was doing, and this book was crucial for my development at the
-      time.</p>
+    <p>Accessibility was a growing consideration in the work I was doing, and
+      this book was crucial for my development at the time.</p>
     <p>I was lucky to have an accessibility mindset going into the smartphone
-      age, when new assistive technologies would be developing at a breakneck
-      pace to keep up with the development of mobile tech.</p>
+      age, when new assistive technologies would be developing at a rapid pace
+      to keep up with the development of mobile tech.</p>
 
-    <h2>
-      <img
-        src="dont-make-me-think.jpg"
-        srcset="dont-make-me-think@2x.jpg 2x"
-        alt="cover of Don’t Make Me Think"
-        height="209"
-        width="160"
-        loading="lazy" />
-      Don’t Make Me Think: A Common Sense Approach to Web Usability (Second
-      Edition)</h2>
-    <p class="subhead">2005, Steve Krug</p>
-    <p>Many of the authors whose blogs I was following had mentioned this book
-      at some point. It took me a while, and a second edition release, before I
-      gave it a go. It seems like it’d be a risk to publish a book where the
-      content is just a bunch of common sense, but I’ll tell ya, it helps to
-      have it printed on paper when you need to convince someone that something
-      is common sense.</p>
-
-    <h2>
+    <h2 id="bulletproof-ajax">
       <img
         src="bulletproof-ajax.jpg"
         srcset="bulletproof-ajax@2x.jpg 2x"
@@ -388,15 +508,20 @@
         loading="lazy" />
       Bulletproof Ajax</h2>
     <p class="subhead">2007, Jeremy Keith</p>
-    <p>The infamous “Hijax” book. This book was about adding functionality to
-      websites with JavaScript, but it clearly described a strategy for graceful
-      degradation, showing unequivocally that there’s no reason to exclude less
-      capable user agents just because you want a dynamic website.</p>
-    <p>Pretty soon smartphones would be invented and a whole slew of new, less
-      capable devices would hit the web. This was going to be a very important
-      idea!</p>
+    <p>Core tenets of the web standards movement in the 2000’s were progressive
+      enhancement and graceful degradation. It might be time to revive those
+      terms for the current generation.</p>
+    <p>This book was about adding functionality to websites with JavaScript in a
+      way that did not exclude less capable user agents. Notably, the “Hijax”
+      technique for submitting forms with Ajax but falling back to HTML form
+      submission shows how simple it can be to not exclude users. With more
+      folks using ad-blockers and disabling JavaScript, these approaches could
+      bring a lot of value today.</p>
+    <p>Soon after the publication of this book, smartphones would become
+      commonplace and a whole slew of less capable devices would hit the web.
+      This was going to be a very important idea!</p>
 
-    <h2>
+    <h2 id="the-art-and-science-of-css">
       <img
         src="art-science-css.jpg"
         srcset="art-science-css@2x.jpg 2x"
@@ -409,16 +534,15 @@
       Smith, and Jonathan Snook</p>
     <p>I won this book in a <a
       href="https://www.themaninblue.com/writing/perspective/2007/05/09/"
-      >contest held by Cameron on his blog</a>. At that point in time, I was
-      living the web standards life, and this book added some great tools to my
-      arsenal.</p>
+      >contest held by Cameron on his blog</a>. It finally paid to have studied
+      fine arts all that time.</p>
     <p>The book had a whole chapter on rounded corners; CSS did not have the
-      <code>border-radius</code> property at the time. The modern look in those
-      days was to put rounded corners on everything. Of course, now that it’s
-      one line of CSS to add rounded corners, the modern look is square corners.
+      <code>border-radius</code> property yet. The modern look in those days was
+      to put rounded corners on everything. Of course, now that it’s one line of
+      CSS to add rounded corners, the modern look is square corners.
       <span class="nowrap" title="person shrugging">¯\_(ツ)_/¯</span></p>
 
-    <h2>
+    <h2 id="restful-web-services">
       <img
         src="restful-web-services.jpg"
         srcset="restful-web-services@2x.jpg 2x"
@@ -428,15 +552,14 @@
         loading="lazy" />
       RESTful Web Services: Web Services for the Real World</h2>
     <p class="subhead">2007, Leonard Richardson and Sam Ruby</p>
-    <p>Everybody was talking about REST, and nobody seemed to know what they
-      were talking about. Folks were getting excited about doing mashups between
-      sites, and it seemed like new applications were meant to come with public
-      APIs.</p>
+    <p>REST was all the buzz, but nobody seemed to know what they were talking
+      about. Folks were getting excited about doing mashups between sites, and
+      it seemed like new applications were expected to have public APIs.</p>
     <p>This book really helped me make sense of the hype at the time. Later it
       would become a guidepost for many later design decisions as more of my
       work became, in essence, API development.</p>
 
-    <h2>
+    <h2 id="javascript-the-good-parts">
       <img
         src="javascript-the-good-parts.jpg"
         srcset="javascript-the-good-parts@2x.jpg 2x"
@@ -452,13 +575,13 @@
       books on JavaScript tiptoe around the language’s weirdness. This book
       takes that weirdness head on…with railroad diagrams.</p>
     <p>One great thing about reading this book was that it gave me some backup
-      when I needed to argue against using tricky code to get something
-      done.</p>
-    <p>The best thing, though, was being introduced to JSLint. Static code
-      analysis and code quality tools would soon become an important part of my
-      development process.</p>
+      when I needed to argue against collaborators using tricky/hacky code to
+      get something done.</p>
+    <p>The best thing, though, was being introduced to JSLint. Static analysis
+      and code quality tools would become an important part of my development
+      process.</p>
 
-    <h2>
+    <h2 id="high-performance-web-sites">
       <img
         src="high-performance-web-sites.jpg"
         srcset="high-performance-web-sites@2x.jpg 2x"
@@ -470,9 +593,9 @@
       Engineers</h2>
     <p class="subhead">2007, Steve Souders</p>
     <p>Essential is right! The approaches in this book are so commonplace that
-      you’re expected to be able to recite them at job interviews.</p>
+      you’re expected to recite them at job interviews, even today.</p>
 
-    <h2>
+    <h2 id="even-faster-web-sites">
       <img
         src="even-faster-web-sites.jpg"
         srcset="even-faster-web-sites@2x.jpg 2x"
@@ -484,11 +607,11 @@
       Developers</h2>
     <p class="subhead">2009, Steve Souders</p>
     <p>This is the nitty-gritty, current (at the time) tech for making fast
-      sites. A lot of good stuff in here—a lot of different stuff. It certainly
-      drove home the idea that you have to be a generalist to do websites
-      properly.</p>
+      sites. A lot of good stuff in here, touching a lot of disparate tech. It
+      certainly drove home the idea that you have to be a generalist to do
+      web development well.</p>
 
-    <h2>
+    <h2 id="getting-things-done">
       <img
         src="getting-things-done.jpg"
         srcset="getting-things-done@2x.jpg 2x"
@@ -498,18 +621,19 @@
         loading="lazy" />
       Getting Things Done: The Art of Stress-Free Productivity</h2>
     <p class="subhead">2002, David Allen</p>
-    <p>Being self-employed requires a lot of discipline when managing resources,
-      especially time. This book is presented as a list of techniques for time
-      management that you can either take or leave.</p>
+    <p>Being self-employed requires a lot of discipline managing resources,
+      especially time. This book is presented as a list of optional techniques
+      for time management.</p>
     <p>An important takeaway for me was that brains are not for information
       storage and retrieval—use tools for that. Write stuff down in a place you
       check regularly. Now I use Google Keep with the widget on my Android
       phone’s home screen, so I see my notes every time I unlock my phone.</p>
-    <p>Another important one was, if it takes less than two minutes (or your
-      preferred time box), just do it immediately. That one is so broadly
-      applicable that it’s touched many parts of my life outside of work.</p>
+    <p>Another important one was, if a task will take less than two minutes (or
+      whatever your preferred time box is,) do it immediately. That one is so
+      broadly applicable that it’s touched many parts of my life outside of
+      work.</p>
 
-    <h2>
+    <h2 id="getting-real">
       <img
         src="getting-real.jpg"
         srcset="getting-real@2x.jpg 2x"
@@ -520,14 +644,14 @@
       Getting Real: The smarter, faster, easier way to build a successful web
       application</h2>
     <p class="subhead">2006, 37Signals</p>
-    <p>I followed the Signal V. Noise blog back when 37Signals had lots of
+    <p>I followed the Signal v. Noise blog back when 37Signals had lots of
       different apps, one of which was Basecamp. Now they’re called Basecamp,
       and all their apps are features of an app called Basecamp.</p>
     <p>I was being referred for contracts building Rails apps. It became
       apparent Rails was designed to support a certain scrappy, agile approach
       to development. This book put that into words.</p>
 
-    <h2>
+    <h2 id="xml">
       <img
         src="xml-visual-quickstart-guide.jpg"
         srcset="xml-visual-quickstart-guide@2x.jpg 2x"
@@ -537,12 +661,12 @@
         loading="lazy" />
       XML: Visual QuickStart Guide (Second Edition)</h2>
     <p class="subhead">2008, Kevin Howard Goldberg</p>
-    <p>XML is very simple, and it doesn’t take a book to learn how to write it.
-      However, <em>using</em> XML is more than writing it. Need to read or
+    <p>XML has simple rules, and it doesn’t take a book to learn how to write
+      it. However, <em>using</em> XML is more than writing it. Need to read or
       define a schema? Better know DTD or XSD, which this book walks through
       smoothly.</p>
 
-    <h2>
+    <h2 id="typography-for-lawyers">
       <img
         src="typography-for-lawyers.jpg"
         srcset="typography-for-lawyers@2x.jpg 2x"
@@ -558,7 +682,7 @@
       designers and clients about typography had always been tricky, and this
       book was a smooth way of aligning on standards and best practices.</p>
 
-    <h2>
+    <h2 id="beginning-asp-dotnet">
       <img
         src="beginning-aspnet-4-in-csharp-2010.jpg"
         srcset="beginning-aspnet-4-in-csharp-2010@2x.jpg 2x"
@@ -570,10 +694,10 @@
     <p class="subhead">2010, Matthew MacDonald</p>
     <p>I signed up for a course at BCIT, and this was on the reading list. It
       gave me an appreciation for the design of the C# language, especially
-      since I was a Java and PHP user. I didn’t know I would end up getting a
+      since I was a Java and PHP user. I had no idea I would end up getting a
       job writing C#.</p>
 
-    <h2>
+    <h2 id="pro-asp-dotnet">
       <img
         src="pro-aspnet-4-in-csharp-2010.jpg"
         srcset="pro-aspnet-4-in-csharp-2010@2x.jpg 2x"
@@ -587,21 +711,21 @@
     <p>I’m glad I got a job writing C#. It’s a nicely designed language, and it
       pays to get a formal introduction to its cool and useful features.</p>
 
-    <h2>
+    <h2 id="pro-git">
       <img
         src="pro-git.jpg"
         srcset="pro-git@2x.jpg 2x"
         alt="cover of Pro Git"
-        height="198"
+        height="199"
         width="160"
         loading="lazy" />
       Pro Git</h2>
     <p class="subhead">2009, Schott Chacon</p>
-    <p>I was done with Subversion. The company I was at was done with Microsoft,
-      and Team Foundation Server was on the way out. Git was the way to go, and
-      I wanted to be a Git pro—so, Pro Git.</p>
+    <p>I’d had my fill of Subversion. The company I was at was moving away from
+      Microsoft tech, so Team Foundation Server was on the way out. Git was the
+      way to go, and I wanted to be a Git pro—so, Pro Git.</p>
 
-    <h2>
+    <h2 id="apache-maven-3-cookbook">
       <img
         src="apache-maven-3-cookbook.jpg"
         srcset="apache-maven-3-cookbook@2x.jpg 2x"
@@ -615,7 +739,7 @@
       Maven was already baked into the project, so I needed some ways to wrangle
       it. And wrangle it I did.</p>
 
-    <h2>
+    <h2 id="effective-java">
       <img
         src="effective-java.jpg"
         srcset="effective-java@2x.jpg 2x"
@@ -626,15 +750,15 @@
       Effective Java (Second Edition)</h2>
     <p class="subhead">2008, Joshua Bloch</p>
     <p>This was the beginning of a big push to learn every little thing I could
-      about the practice of software development, not just the tech. I recall
-      this book being extremely useful for someone currently working on a Java
+      about the craft of software development, not just the tech. I recall this
+      book being extremely useful for someone currently working on a Java
       program. Basically every page I read had something I could apply to what I
       was building at the time.</p>
-    <p>It got me very curious with the Java standard libraries, and I started
-      reading the source of each library method I called as a habit for a while
-      after this.</p>
+    <p>It got me very curious about the Java standard libraries, and I started
+      reading the source of every library method I called out of habit for a
+      while after this.</p>
 
-    <h2>
+    <h2 id="design-patterns">
       <img
         src="design-patterns.jpg"
         srcset="design-patterns@2x.jpg 2x"
@@ -647,10 +771,16 @@
       Vlissides</p>
     <p>It was time to read some classics. I was working on enterprise Java
       software at the time, so I encountered a lot of these patterns in the
-      frameworks I was using on the daily. That’s probably the best way to learn
-      design patterns, I imagine.</p>
+      frameworks I was using. That’s probably the best way to learn design
+      patterns, I imagine.</p>
+    <p>Whenever I recommend this book, I tell people to buy it, and then read
+      the two pages inside the front cover a few times. Those pages just list
+      the patterns with a short description of each. Once you know what they’re
+      called and what they’re for, you have everything you need to know. The
+      rest of the book is a reference for when you’ve identified there’s a
+      pattern in use or one you might want to implement.</p>
 
-    <h2>
+    <h2 id="refactoring">
       <img
         src="refactoring.jpg"
         srcset="refactoring@2x.jpg 2x"
@@ -661,15 +791,15 @@
       Refactoring: Improving the Design of Existing Code</h2>
     <p class="subhead">1999, Martin Fowler with Kent Beck, John Brant, William
       Opdyke, and Don Roberts</p>
-    <p>I came at this book from an angle that may be somewhat unusual. I was
-      working on replacing the client application for an existing app, so the
-      code was all new, and the database would remain the same.</p>
+    <p>I came at this book from a somewhat unusual angle. I was working on
+      replacing the client application for an existing app, so the app code was
+      all new, and only the database would remain the same.</p>
     <p>My key takeaways were: write code that will be easy to refactor; don’t
       write code that you will want to refactor anytime soon; and, write
       testable code, because you can’t safely refactor if you don’t know what
       you’re breaking (and you’ll be breaking things.)</p>
 
-    <h2>
+    <h2 id="clean-code">
       <img
         src="clean-code.jpg"
         srcset="clean-code@2x.jpg 2x"
@@ -685,21 +815,21 @@
       enjoyable.</p>
     <p>I don’t know how well it aged; there was a blog not too long ago asking,
       “Is it time we stopped recommending Clean Code?” I think the book probably
-      comes across differently to new and experienced developers. Strong advice
-      in a book can’t really be clarified by the reader, so unless the reader
-      already has strong counterarguments, it might come through as
+      comes across differently to new and experienced developers. It’s difficult
+      for a reader to get clarification or contest strong opinions in a book, so
+      unless they already have strong counterarguments, it might come through as
       doctrine.</p>
     <p>It might be intended as doctrine, but if taken as just another way to
       think about software development, I see it as having practical use. It
       definitely offers a picture of the professionalism that software
       developers can hold themselves to.</p>
 
-    <h2>
+    <h2 id="practical-typography">
       <img
         src="practical-typography.jpg"
         srcset="practical-typography@2x.jpg 2x"
         alt="cover of Practical Typography"
-        height="231"
+        height="208"
         width="160"
         loading="lazy" />
       Butterick’s Practical Typography</h2>
@@ -708,7 +838,7 @@
       wanted to improve their typography know-how, I was happy to see that those
       lessons had been revised for web publishing.</p>
 
-    <h2>
+    <h2 id="developing-backbonejs-applications">
       <img
         src="backbonejs-applications.jpg"
         srcset="backbonejs-applications@2x.jpg 2x"
@@ -719,10 +849,10 @@
       Developing Backbone.js Applications: Building Better JavaScript
       Applications</h2>
     <p class="subhead">2013, Addy Osmani</p>
-    <p>Frontend frameworks had recently become a thing. Web users were coming to
-      expect single page applications. A little jQuery on top of a server-side
-      rendered application was the old way of doing things, so new projects had
-      to choose a framework to build on—not a decision to be taken lightly.</p>
+    <p>Web users were coming to expect single page applications. A little jQuery
+      on top of a server-side rendered application was the old way of doing
+      things. Frontend frameworks were the new big decision that had to be made
+      at the outset of a project.</p>
     <p>Thanks to Chrome, JavaScript engines in all browsers were becoming more
       powerful every release, and new frameworks work were coming out regularly,
       trying to harness this new power.</p>
@@ -732,7 +862,7 @@
       dig into these new approaches and pick one to build on. Backbone won me at
       the time with its dedication to simplicity.</p>
 
-    <h2>
+    <h2 id="functional-javascript">
       <img
         src="functional-javascript.jpg"
         srcset="functional-javascript@2x.jpg 2x"
@@ -747,14 +877,13 @@
       make a flexible utility library for JavaScript, separate from a DOM
       library (Ajax library?) like jQuery. Prototype.js was a popular one, and
       it left a bad taste in many developers’ mouths because of its choice to
-      extend base types instead of simply defining pure functions that act on
-      them.</p>
-    <p>Underscore, and books like this, were an important part of helping
-      JavaScript developers to learn the functional programming vernacular. I
-      saw a shift to simpler frontend solutions once the devs started applying
-      more functional programming concepts.</p>
+      extend base types instead of simply defining pure functions.</p>
+    <p>Underscore.js and books like this one, were an important part of helping
+      JavaScript developers learn the functional programming vernacular. I saw a
+      shift to simpler frontend solutions once the devs started applying more
+      functional programming concepts.</p>
 
-    <h2>
+    <h2 id="effective-javascript">
       <img
         src="effective-javascript.jpg"
         srcset="effective-java@2x.jpg 2x"
@@ -772,7 +901,7 @@
       to make this list because of my fond recollections of just how
       well-written it is.</p>
 
-    <h2>
+    <h2 id="beautiful-evidence">
       <img
         src="beautiful-evidence.jpg"
         srcset="beautiful-evidence@2x.jpg 2x"
@@ -789,7 +918,7 @@
       had a huge amount of shared understanding of data visualization that we
       could use to discuss feature design.</p>
 
-    <h2>
+    <h2 id="the-22-immutable-laws-of-branding">
       <img
         src="22-immutable-laws-of-branding.jpg"
         srcset="22-immutable-laws-of-branding@2x.jpg 2x"
@@ -803,7 +932,7 @@
       boss requested I pick this one up because there were a couple of brands
       that the company needed to develop.</p>
 
-    <h2>
+    <h2 id="inside-the-tornado">
       <img
         src="inside-the-tornado.jpg"
         srcset="inside-the-tornado@2x.jpg 2x"
@@ -814,14 +943,13 @@
       Inside the Tornado: Strategies for Developing, Leveraging, and Surviving
       Hypergrowth Markets</h2>
     <p class="subhead">2005, Geoffrey A. Moore</p>
-    <p>Working for a small tech shop that had experienced explosive growth, it
+    <p>Working for a small tech shop that had experienced explosive demand, it
       was important to understand how market forces informed the technological
-      choices during that period of hypergrowth. This book was a big help
-      because it showed me the parallels between the company I was at and others
-      that had experienced similar growth and come out the other end a
-      success.</p>
+      choices during that period of growth. This book was a big help because it
+      showed me the parallels between the company I was at and others that had
+      experienced similar spikes and come out the other end a success.</p>
 
-    <h2>
+    <h2 id="crossing-the-chasm">
       <img
         src="crossing-the-chasm.jpg"
         srcset="crossing-the-chasm@2x.jpg 2x"
@@ -838,7 +966,7 @@
       after the hype dies down, which was an important part of my role at the
       company.</p>
 
-    <h2>
+    <h2 id="data-science-from-scratch">
       <img
         src="data-science-from-scratch.jpg"
         srcset="data-science-from-scratch@2x.jpg 2x"
@@ -853,7 +981,7 @@
       companies trying to build out data science teams. This book was a nice
       peek behind the curtain of the day-to-day of those teams.</p>
 
-    <h2>
+    <h2 id="cracking-the-coding-interview">
       <img
         src="cracking-the-coding-interview.jpg"
         srcset="cracking-the-coding-interview@2x.jpg 2x"
@@ -872,7 +1000,7 @@
       to slog through our industry’s insistence on keeping this archaic
       tradition alive.</p>
 
-    <h2>
+    <h2 id="apprenticeship-patterns">
       <img
         src="apprenticeship-patterns.jpg"
         srcset="apprenticeship-patterns@2x.jpg 2x"
@@ -883,14 +1011,14 @@
       Apprenticeship Patterns: Guidance for the Aspiring Software
       Craftsman</h2>
     <p class="subhead">2009, David H. Hoover and Adewale Oshineye</p>
-    <p>I wonder how many of my students that I recommended this book to actually
-      gave it a read. It tries to explain approaches to advancing your software
+    <p>I wonder how many of the students I recommended this book to actually
+      read it. It tries to explain approaches to advancing your software
       development career in the form of design patterns. The problem is, folks
       who are new to software development probably haven’t learned to apply
       design pattern in their work yet, so I wonder how well this strategy works
       when applied to their careers.</p>
 
-    <h2>
+    <h2 id="97-things-every-programmer-should-know">
       <img
         src="97-things-every-programmer-should-know.jpg"
         srcset="97-things-every-programmer-should-know@2x.jpg 2x"
@@ -903,15 +1031,15 @@
     <p class="subhead">2010, Kevlin Henney</p>
     <p>I acknowledge that my career in software development is not typical, and
       so I had hoped that reading about others’ experiences might help me to be
-      a better mentor to people getting into the field. I don’t remember too
-      many of the stories, but it was interesting to hear how my experiences,
-      although atypical, had many parallels to people who took a more
-      traditional route.</p>
+      a better mentor to people getting into the field. I don’t remember many
+      specifics of the stories in this book, but it was interesting to hear how
+      my experiences, although atypical, had many parallels to people who took a
+      more traditional route.</p>
     <p>It wasn’t until I tried recommending this book to others that the lack of
       diversity of its authors was pointed out to me. I would hope that a book
       like this published nowadays would be more representative.</p>
 
-    <h2>
+    <h2 id="securing-the-perimeter">
       <img
         src="securing-the-perimeter.jpg"
         srcset="securing-the-perimeter@2x.jpg 2x"
@@ -923,14 +1051,14 @@
       Free Open Source Software</h2>
     <p class="subhead">2018, Michael Schwartz and Maciuj Machulak</p>
     <p>The conversation around web application security has changed massively
-      over the years. It used to be, worryingly, “Which hashing function do you
+      over the years. It used to be (worryingly) “Which hashing function do you
       use before storing passwords?” Luckily, the conversation is shifting
       toward federated identity, SSO, and MFA, and away from home-baked IAM.</p>
     <p>I think my takeaway from this book was the exposure to a consistent voice
       on the variety of topics involved in IAM, which are normally discussed
       piecemeal in documentation and other resources.</p>
 
-    <h2>
+    <h2 id="docker-deep-dive">
       <img
         src="docker-deep-dive.jpg"
         srcset="docker-deep-dive@2x.jpg 2x"
@@ -941,13 +1069,13 @@
       Docker Deep Dive</h2>
     <p class="subhead">2017, Nigel Poulton</p>
     <p>Having had my computers’ resources eaten by VMs for the years leading
-      upto containers becoming mainstream got me super pumped to learn this
+      upto containers becoming mainstream, I was super pumped to learn this
       stuff as well as I could. Since the containerization landscape was and
-      still is shifting, the best a book will do for you is to lay a solid
+      still is shifting, the best a book can do for you is to lay a solid
       foundation, but it’s worth it—that’s not what the docs and examples are
       for.</p>
 
-    <h2>
+    <h2 id="the-kubernetes-book">
       <img
         src="the-kubernetes-book.jpg"
         srcset="the-kubernetes-book@2x.jpg 2x"
@@ -957,13 +1085,13 @@
         loading="lazy" />
       The Kubernetes Book</h2>
     <p class="subhead">2017, Nigel Poulton</p>
-    <p>At the time, this was the must-read, “How to speak devops,” book. Sick of
-      all the problems with the older ways of deploying microservices, it seemed
-      like everyone was extremely eager to immerse themselves in the problems of
-      the newer ways. On that note, everything that I said about Docker Deep
-      Dive applies here as well.</p>
+    <p>This was the “how to speak devops” book at the time. Sick of all the
+      problems with the older ways of deploying microservices, it seemed like
+      everyone was eager to subject themselves to the problems of the newer
+      ways. On that note, everything that I said about Docker Deep Dive applies
+      here as well.</p>
 
-    <h2>
+    <h2 id="deep-work">
       <img
         src="deep-work.jpg"
         srcset="deep-work@2x.jpg 2x"
@@ -976,13 +1104,13 @@
     <p>My strategy for getting focus time at work is to wake up early and get
       into the office a few hours before everyone else. Lucky for me, most devs
       don’t get to the office until 10:30 or so. But that raised the question,
-      how do those devs get focus time.</p>
-    <p>A handful of us at my company had been recommended to read this book by
-      the head of engineering. By spreading these ideas around, I think the idea
-      that people wanted to be uninterrupted really made it into the culture,
-      and there was some real improvement on reducing distractions.</p>
+      how do those devs get focus time?</p>
+    <p>A handful of folks at my company had been recommended to read this book
+      by the head of engineering. By spreading these ideas around, I think the
+      idea that people wanted to be uninterrupted really made it into the
+      culture, and there was some progress on reducing distractions.</p>
 
-    <h2>
+    <h2 id="http2-in-action">
       <img
         src="http2-in-action.jpg"
         srcset="http2-in-action@2x.jpg 2x"
@@ -993,21 +1121,21 @@
       HTTP/2 in Action</h2>
     <p class="subhead">2019, Barry Pollard</p>
     <p>It was strange watching Chrome take over the browser market and then push
-      its own protocols, SPDY and QUIC. Sometimes I would come to work and look
-      in the Network tab in my dev tools and be confused by seeing new
-      protocols.</p>
+      its own protocols, SPDY and QUIC. I remember coming into work and opening
+      up the Network tab in my dev tools to be met with strange new kinds of
+      traffic.</p>
     <p>Eventually HTTP/2 became a proper standard, and folks outside of Google
       were playing with how to optimize their sites using it. It was
-      messy—server push was getting people excited, but ended up being less
-      useful than originally thought. A lot of optimization came from merely
-      using the protocol (which meant figuring out how to get your server to
-      speak it.)</p>
+      messy—server push was what people were excited about, but it ended up
+      being less useful than originally thought. A lot of optimization came from
+      merely using the protocol (which meant figuring out how to get your server
+      to speak it.)</p>
     <p>I chose to read this book on it because it came after things had settled
       down a bit and a lot of kinks had been worked out. That was a good call; I
       had read books on tech that was too fresh before, and that’s really not
       the time to be putting things into print.</p>
 
-    <h2>
+    <h2 id="shape-up">
       <img
         src="shape-up.png"
         srcset="shape-up@2x.png 2x"
@@ -1022,9 +1150,9 @@
       team. The head of engineering at the time figured we should give this
       approach a try. The technical leadership team and I gave this a read and
       hashed out how we could progressively adopt the parts of the approach that
-      would work for us.</p>
+      would work for us. I won’t comment on how successful we were.</p>
 
-    <h2>
+    <h2 id="tcpip-illustrated">
       <img
         src="tcpip-illustrated.jpg"
         srcset="tcpip-illustrated@2x.jpg 2x"
@@ -1037,13 +1165,13 @@
     <p>One day at work, I gave a presentation about the protocol stack to the
       developers on my team. It was short, and I felt confident in what I said,
       but afterward, I started reflecting on just how deep my understanding of
-      the protocols was. The problem was, I didn’t know how deep because I had
-      picked up most of my knowledge over the years on the job.</p>
+      the protocols was. The problem was, I didn’t know how deep it went because
+      I had picked up most of my knowledge over the years on the job.</p>
     <p>This book was a great opportunity for me to fact-check my understandings
       of the protocols and reinforce my knowledge of the history that lead to
       the refinement of the protocols into what we contend with today.</p>
 
-    <h2>
+    <h2 id="security-engineering">
       <img
         src="security-engineering.jpg"
         srcset="security-engineering@2x.jpg 2x"
@@ -1060,12 +1188,12 @@
       immediately ordered it and dug in.</p>
     <p>In the same way that my approach to application development changed when
       I started making decisions based on the holistic understanding of software
-      development as a business, the comprehensive approach to this book,
+      development as a business, the comprehensive nature of this book,
       including its reflections on past editions, have prompted me to think
-      about security engineering in a more holistic way, too. I also am saying
+      about security engineering in a more holistic way. I also am saying
       “capable, motivated opponent” more regularly now.</p>
 
-    <h2>
+    <h2 id="zzt">
       <img
         src="zzt.jpg"
         srcset="zzt@2x.jpg 2x"
@@ -1076,13 +1204,13 @@
       ZZT</h2>
     <p class="subhead">2014, Anna Anthropy</p>
     <p>ZZT meant a lot to me, for reasons made obvious by this post. It was
-      wonderful to read this book about the impact it had on so many others. I
-      am among the many people in my generation that got their start in
-      programming using the ZZT level editor, and this book helped me understand
-      the similarities between my path and the paths of others from that
+      heart-warming to read this book about the impact it had on so many others.
+      I am among the many in my generation that got their start in programming
+      thanks to the ZZT level editor, and this book helped me understand the
+      similarities between my path and the paths of others from that
       community.</p>
 
-    <h2>
+    <h2 id="the-psychology-of-computer-programming">
       <img
         src="psychology-of-computer-programming.jpg"
         srcset="psychology-of-computer-programming@2x.jpg 2x"
@@ -1095,17 +1223,17 @@
     <p>I don’t recall when I first stumbled on the <a
       href="https://blog.codinghorror.com/the-ten-commandments-of-egoless-programming/"
       >Ten Commandments of Egoless Programming</a>, but I had been passing it
-      out for years before I thought to myself, “I ought to actually read the
-      book that that’s based on.”</p>
+      out for years before I thought to myself, “I ought to read the book that
+      that’s based on.”</p>
     <p>This book was a real trip! Written in 1971, with notes at the end of each
       chapter added in 1998, and read by me in 2021, it was fascinating to hear
       how little has changed in software development in fifty years. The
       experience got me really pumped to dig more into the history of software
       development and to better understand not only how we got to where we are,
-      but what the dead ends along the way were as folks experimented with
+      but what were the dead ends along the way as folks experimented with
       approaches.</p>
 
-    <h2>
+    <h2 id="becoming-a-technical-leader">
       <img
         src="becoming-a-technical-leader.jpg"
         srcset="becoming-a-technical-leader@2x.jpg 2x"
@@ -1127,7 +1255,7 @@
       focus more on technical leadership and read more from the Quality Software
       Management series.</p>
 
-    <h2>
+    <h2 id="unicode-explained">
       <img
         src="unicode-explained.jpg"
         srcset="unicode-explained@2x.jpg 2x"
@@ -1140,11 +1268,20 @@
     <p class="subhead">2006, Jukka K. Korpela</p>
     <p>Another book from a series of purchases prompted by conversations about
       technologies that I had learned on the job. I had been working with
-      Unicode for a long, long time, and had a pretty solid understanding of it.
-      But, when I was in the position of explaining it in depth verbally, I
-      realized I didn’t have many the specifics memorized. Having read this and
+      Unicode for a long time and had what I thought was a solid understanding
+      of it. But, when I was in the position of explaining it in depth verbally,
+      I realized I didn’t have many the specifics down pat. Having read this and
       done experiments and further research, I expect to be able to explain
       Unicode concepts more thoroughly and correctly than before.</p>
+
+    <hr />
+
+    <p>Well, that was a trip! After writing all that, I feel like I have a
+      better understanding of the role that books play in software development
+      education. It was surprising to think about how many technologies I
+      learned on the job instead of from books. For many of those technologies,
+      I feel like it would be a blast to read a book or two to see what I’m
+      missing. 🤓</p>
   </main>
   <footer>
     <p><small>© 2021 David VanDusen</small></p>
