@@ -149,7 +149,12 @@ article > header {
   margin: 5rem 0;
 }
 
+article > header p {
+  font-family: var(--sans-serif);
+}
+
 article > footer {
+  font-family: var(--sans-serif);
   margin: 10rem 0 5rem;
   text-align: center;
 }
