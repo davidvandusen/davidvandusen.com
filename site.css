@@ -28,7 +28,15 @@ a:link {
 }
 
 a:visited {
-  color: #963;
+  color: #729;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  color: #c03;
 }
 
 code, kbd {
