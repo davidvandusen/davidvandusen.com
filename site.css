@@ -31,14 +31,6 @@ a:visited {
   color: #729;
 }
 
-a:hover {
-  text-decoration: none;
-}
-
-a:active {
-  color: #c03;
-}
-
 code, kbd {
   font-family: var(--mono);
 }
