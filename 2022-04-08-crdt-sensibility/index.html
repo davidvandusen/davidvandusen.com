@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="robots" content="noindex" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <link rel="stylesheet" href="/site.css" />
+  <title>CRDT Sensibility</title>
+</head>
+<body>
+<nav><a href="https://davidvandusen.com/">davidvandusen.com</a></nav>
+<article>
+  <header>
+    <h1>CRDT Sensibility</h1>
+    <p>Published on <time>April 8, 2022</time> by
+      <a href="https://davidvandusen.com/">David VanDusen</a>.</p>
+  </header>
+  <main>
+    <p>In their first week with <a href="https://commit.dev/">Commit</a>, each
+      new Engineering Partner takes on a hackathon onboarding project. They
+      build a project, present it to the Commit community, and write a short
+      summary of their experience. There are no restrictions, no limits, no
+      joke.</p>
+    <p>I decided to spend my first week at Commit developing a sensibility for
+      working with CRDTs (commutative/conflict-free replicated data types) in
+      the context of a collaborative document editing application.</p>
+    <h2>Why CRDTs</h2>
+    <p>Around 2018/19, there was growing buzz about technologies that enable
+      near real-time collaborative editing of documents in web apps without some
+      drawbacks of other approaches (like Operational Transformation—does
+      anybody remember <a
+      href="https://svn.apache.org/repos/asf/incubator/wave/whitepapers/operational-transform/operational-transform.html">Google
+      Wave</a>?)</p>
+    <p>I recall watching <a
+      href="https://www.youtube.com/watch?v=B5NULPSiOGw">CRDTs and the Quest for
+      Distributed Consistency</a>, reading <a
+      href="https://www.figma.com/blog/how-figmas-multiplayer-technology-works/">How
+      Figma’s multiplayer technology works</a>, and playing with <a
+      href="https://news.ycombinator.com/item?id=19605052">Room.sh</a> at around
+      the same time.</p>
+    <h2>The experience of building with CRDTs</h2>
+    <p>I test-drove a popular CRDT library for JavaScript called <a
+      href="https://github.com/yjs/yjs">Yjs</a> by writing a simple app where
+      users can modify a document whose data is represented as a tree. If the
+      app is still online, it can be seen at <a
+      href="https://hop.figureandsound.com/">hop.figureandsound.com</a>.</p>
+    <p>After a couple snags and gotchas, I wrapped my head around the concepts
+      pretty quickly. Here are my takeaways about working with Yjs.</p>
+    <h3>There are limitations on the operations that can be performed</h3>
+    <p>You can only do inserts and deletes. Moving a node is a delete plus an
+      insert. Operations each get a unique ID (in the form of a <a
+      href="https://en.wikipedia.org/wiki/Lamport_timestamp">Lamport
+      Timestamp</a>), but nodes are not uniquely identifiable, so there aren’t
+      operations for moving them around the data structure. If the data
+      structure is a tree, a move operation will delete the whole subtree under
+      the moving node and reinsert a clone of it at its new parent.</p>
+    <h3>Think through the lifecycle of a document</h3>
+    <p>Depending on how many users are likely to edit a document concurrently,
+      whether they’ll be doing so offline and syncing later, and how deeply
+      nested the data structure is likely to get, there may be risks of
+      (perceived) data loss. Of course, since the CRDT preserves all operations,
+      no data is truly lost, but without care taken in the design of the user
+      experience, I can imagine scenarios that, if not handled carefully, would
+      cause users to panic upon seeing their changes disappear during a
+      sync.</p>
+    <h3>Understand the options and the ecosystem</h3>
+    <p>It’s great to see that there is ongoing research into these technologies.
+      The algorithms and data structures are continually being optimized. New
+      network and persistence plugins are being added to the Yjs project.
+      Choosing any CRDT implementation means joining an active community of
+      researchers who are working on making this technology more mainstream.</p>
+    <h2>Another tool in my tool belt</h2>
+    <p>I would encourage any web developer to give Yjs a spin. Reading <a
+      href="https://www.researchgate.net/publication/310212186_Near_Real-Time_Peer-to-Peer_Shared_Editing_on_Extensible_Data_Types">the
+      paper</a> and other supporting materials doesn’t take a big commitment,
+      and making a simple app is all it takes to get a feel for how to use it. I
+      look forward to getting a chance to apply the technology to a more
+      ambitious project.</p>
+  </main>
+  <footer>
+    <p><small>© 2022 David VanDusen</small></p>
+  </footer>
+</article>
+</body>
+</html>
